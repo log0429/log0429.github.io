@@ -96,13 +96,13 @@
       
         <p>参考博客: <a href="jianshu.com/p/ebbbc8edcc24">jianshu.com/p/ebbbc8edcc24</a></p>
 <p><strong>以添加“分类”页面为例。</strong></p>
-<p>##添加 分类 页面<br>使用    <code>hexo new page categories</code>新建一个 分类 页面，此命令会在source文件夹下初始化分类目录，并生成一个index文件。<br><img src="/images/categories目录.jpg" alt><br>在主题的_config.yml文件中的 menu 中进行设置<br>注：不同主题_config.yml文件有所区别<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: /                  #主页</span><br><span class="line">  categories: /categories  #分类  （添加此行即可）</span><br><span class="line">  archives: /archives      #归档</span><br><span class="line">  tags: /tags              #标签</span><br><span class="line">  about: /about            #关于                  </span><br><span class="line">或    </span><br><span class="line">menu:</span><br><span class="line">  - page: home</span><br><span class="line">    directory: .            #主页</span><br><span class="line">    icon: fa-home</span><br><span class="line">  - page: archive</span><br><span class="line">    directory: archives/    #归档</span><br><span class="line">    icon: fa-archive</span><br><span class="line">  - page: about</span><br><span class="line">    directory: about/       #关于</span><br><span class="line">    icon: fa-user</span><br><span class="line">  - page: rss</span><br><span class="line">    directory: atom.xml     #rss订阅</span><br><span class="line">    icon: fa-rss</span><br></pre></td></tr></table></figure></p>
-<p>##修改文章模板<br>文章的模版在scaffolds/post.md，内容修改如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">categories:</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
+<h2 id="添加-分类-页面"><a href="#添加-分类-页面" class="headerlink" title="添加 分类 页面"></a>添加 分类 页面</h2><p>使用    <code>hexo new page categories</code>新建一个 分类 页面，此命令会在source文件夹下初始化分类目录，并生成一个index文件。<br><img src="/images/categories目录.jpg" alt><br>在主题的_config.yml文件中的 menu 中进行设置<br>注：不同主题_config.yml文件有所区别<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: /                  #主页</span><br><span class="line">  categories: /categories  #分类  （添加此行即可）</span><br><span class="line">  archives: /archives      #归档</span><br><span class="line">  tags: /tags              #标签</span><br><span class="line">  about: /about            #关于                  </span><br><span class="line">或    </span><br><span class="line">menu:</span><br><span class="line">  - page: home</span><br><span class="line">    directory: .            #主页</span><br><span class="line">    icon: fa-home</span><br><span class="line">  - page: archive</span><br><span class="line">    directory: archives/    #归档</span><br><span class="line">    icon: fa-archive</span><br><span class="line">  - page: about</span><br><span class="line">    directory: about/       #关于</span><br><span class="line">    icon: fa-user</span><br><span class="line">  - page: rss</span><br><span class="line">    directory: atom.xml     #rss订阅</span><br><span class="line">    icon: fa-rss</span><br></pre></td></tr></table></figure></p>
+<h2 id="修改文章模板"><a href="#修改文章模板" class="headerlink" title="修改文章模板"></a>修改文章模板</h2><p>文章的模版在scaffolds/post.md，内容修改如下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: &#123;&#123; title &#125;&#125;</span><br><span class="line">date: &#123;&#123; date &#125;&#125;</span><br><span class="line">categories:</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/27/hexo设置分类、标签、归档、时间线、关于/" data-id="ck3h28g8k0006uotsx5f2imf4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/27/hexo设置分类、标签、归档、时间线、关于/" data-id="ck3h2yeei000a58tsuv6kzrm1" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/博客/">博客</a></li></ul>
@@ -141,7 +141,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/11/26/夏藏冬来见/" data-id="ck3h28g8m0009uots6z6vqgya" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/11/26/夏藏冬来见/" data-id="ck3h2yeed000458tsrzn71e32" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/宫灯夜明/">宫灯夜明</a></li></ul>
@@ -185,7 +185,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/06/02/天线通信/" data-id="ck3h28g8o000buots60crwri2" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/06/02/天线通信/" data-id="ck3h2yeek000d58tsclwo021c" class="article-share-link">Share</a>
       
       
     </footer>
@@ -222,7 +222,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/23/江阴的迈巴赫/" data-id="ck3h28g8p000duotsap7riroe" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/23/江阴的迈巴赫/" data-id="ck3h2yeeh000958tsz03ll7df" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/宫灯夜明/">宫灯夜明</a></li></ul>
@@ -256,21 +256,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>##导入数据，绘图</p>
-<p>1.将需要处理的数据保存到工作目录</p>
+        <h2 id="导入数据，绘图"><a href="#导入数据，绘图" class="headerlink" title="导入数据，绘图"></a>导入数据，绘图</h2><p>1.将需要处理的数据保存到工作目录</p>
 <p>2.在MATLAB左侧“当前文件夹”区域双击打开.csv文件</p>
 <p>3.选中需要导入的数据，右键导入</p>
 <p>4.plot()绘图</p>
 <p>5.legend(‘xxxx’,’xxxx’)添加图例</p>
 <p>6.title(‘xxxx’)添加标题</p>
-<p>##在曲线上取点，能够显示点的坐标<br>在图形界面窗口中，工具栏上的【Data Cursor】（数据游标）工具，然后再在需要查看坐标值的数据点上单击左键即可。</p>
-<p>##ezplot绘制隐函数图像<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">plot(VarName6,VarName5,&apos;g&apos;)</span><br><span class="line">hold on</span><br><span class="line">x1=cursor_info_x1.Position(:,1);</span><br><span class="line">x2=cursor_info_x2.Position(:,1);</span><br><span class="line">y1=cursor_info_y1.Position(:,2);</span><br><span class="line">y2=cursor_info_y2.Position(:,2);</span><br><span class="line">x0=(x2+x1)/2;</span><br><span class="line">y0=(y2+y1)/2;</span><br><span class="line">a=(x2-x1)/2;</span><br><span class="line">b=(y2-y1)/2;</span><br><span class="line">syms x</span><br><span class="line">syms y</span><br><span class="line">h=ezplot(b^2*x^2+a^2*y^2-2*b^2*x0*x-2*a^2*y0*y+b^2*x0^2+a^2*y0^2-a^2*b^2 == 0,[x1-10000,x2+10000,y1-10000,y2+10000])</span><br><span class="line">set(h,&apos;Color&apos;,&apos;r&apos;)</span><br><span class="line">legend(&apos;实际航线&apos;,&apos;规划航线&apos;)</span><br><span class="line">title(&apos;高速圆形轨迹&apos;)</span><br></pre></td></tr></table></figure></p>
-<p>##经纬度坐标转化为二维坐标<br>latlon2pix命令（未完成）</p>
+<h2 id="在曲线上取点，能够显示点的坐标"><a href="#在曲线上取点，能够显示点的坐标" class="headerlink" title="在曲线上取点，能够显示点的坐标"></a>在曲线上取点，能够显示点的坐标</h2><p>在图形界面窗口中，工具栏上的【Data Cursor】（数据游标）工具，然后再在需要查看坐标值的数据点上单击左键即可。</p>
+<h2 id="ezplot绘制隐函数图像"><a href="#ezplot绘制隐函数图像" class="headerlink" title="ezplot绘制隐函数图像"></a>ezplot绘制隐函数图像</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">plot(VarName6,VarName5,&apos;g&apos;)</span><br><span class="line">hold on</span><br><span class="line">x1=cursor_info_x1.Position(:,1);</span><br><span class="line">x2=cursor_info_x2.Position(:,1);</span><br><span class="line">y1=cursor_info_y1.Position(:,2);</span><br><span class="line">y2=cursor_info_y2.Position(:,2);</span><br><span class="line">x0=(x2+x1)/2;</span><br><span class="line">y0=(y2+y1)/2;</span><br><span class="line">a=(x2-x1)/2;</span><br><span class="line">b=(y2-y1)/2;</span><br><span class="line">syms x</span><br><span class="line">syms y</span><br><span class="line">h=ezplot(b^2*x^2+a^2*y^2-2*b^2*x0*x-2*a^2*y0*y+b^2*x0^2+a^2*y0^2-a^2*b^2 == 0,[x1-10000,x2+10000,y1-10000,y2+10000])</span><br><span class="line">set(h,&apos;Color&apos;,&apos;r&apos;)</span><br><span class="line">legend(&apos;实际航线&apos;,&apos;规划航线&apos;)</span><br><span class="line">title(&apos;高速圆形轨迹&apos;)</span><br></pre></td></tr></table></figure>
+<h2 id="经纬度坐标转化为二维坐标"><a href="#经纬度坐标转化为二维坐标" class="headerlink" title="经纬度坐标转化为二维坐标"></a>经纬度坐标转化为二维坐标</h2><p>latlon2pix命令（未完成）</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/22/MATLAB读取-csv数据绘图/" data-id="ck3h28g8h0004uotsj885a5pd" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/22/MATLAB读取-csv数据绘图/" data-id="ck3h2yee4000058ts9ut66fnw" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MATLAB/">MATLAB</a></li></ul>
@@ -337,7 +336,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/21/QT布局/" data-id="ck3h28g890000uotsrrc8ccx7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/21/QT布局/" data-id="ck3h2yeee000558ts7fkyp6db" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/QT/">QT</a></li></ul>
@@ -376,7 +375,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/20/一切最开始的时候/" data-id="ck3h28g8e0002uotsv4werngo" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/20/一切最开始的时候/" data-id="ck3h2yeea000258tssv04ombw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -421,7 +420,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/19/hello-world/" data-id="ck3h28g8j0005uotsp98k3sqh" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/19/hello-world/" data-id="ck3h2yeef000658tsoxrfbyrx" class="article-share-link">Share</a>
       
       
     </footer>
