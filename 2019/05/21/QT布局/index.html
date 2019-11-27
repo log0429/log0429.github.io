@@ -118,7 +118,7 @@
 <p>在 Qt 设计师或 QtCreator 设计模式左边 Widget Box 里面没有分裂器可以拖动，使用分裂器的方式是：<br>选中已有的控件，然后点击上面工具栏的水平分裂器或垂直分裂器按钮。</p>
 <p>分裂器内每个控件都有一个手柄 Handle，水平分裂器内控件的手柄在左边，垂直分裂器内控件的手柄在控件上方。<br>第0个控件的手柄是永久隐藏的，分裂器自身占据的大矩形四个边界线通常不能拖动拉大，只能拖动控件之间的手柄。</p>
 <p>分裂器整体的尺寸不是用户控制的，而在分裂器内部的控件尺寸可以让用户手工拖动手柄来控制。<br>在程序运行时，水平分裂器内各个控件的宽度、垂直分裂器内部各个控件的高度， 一般都是用户拖动手柄控制，这是分裂器和布局器最大的不同。</p>
-<p><strong>最简单的分割窗体</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;QApplication&gt;  </span><br><span class="line">#include &lt;QLabel&gt;  </span><br><span class="line">#include &lt;QSplitter&gt;</span><br><span class="line"> </span><br><span class="line">int main(int argc, char *argv[])  </span><br><span class="line">&#123;  </span><br><span class="line">    QApplication app(argc, argv);  </span><br><span class="line"> </span><br><span class="line">	QSplitter * mainSplitter = new QSplitter(Qt::Horizontal);</span><br><span class="line">	mainSplitter-&gt;setHandleWidth(10);</span><br><span class="line">	mainSplitter-&gt;setStyleSheet(&quot;QSplitter::handle &#123; background-color: black &#125;&quot;); //设置分界线的样式</span><br><span class="line">    QLabel *label = new QLabel(QObject::tr(&quot;TestA&quot;));</span><br><span class="line">    QLabel *label2 = new QLabel(QObject::tr(&quot;TestB&quot;));</span><br><span class="line"> </span><br><span class="line">    mainSplitter-&gt;addWidget(label2);</span><br><span class="line">    mainSplitter-&gt;addWidget(label);</span><br><span class="line">    mainSplitter-&gt;setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Expanding);</span><br><span class="line">    mainSplitter-&gt;show(); </span><br><span class="line"> </span><br><span class="line">    return app.exec();  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>最简单的分割窗体</strong><br><figure class="highlight zephir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;QApplication&gt;  </span></span><br><span class="line"><span class="comment">#include &lt;QLabel&gt;  </span></span><br><span class="line"><span class="comment">#include &lt;QSplitter&gt;</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">int</span> main(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])  </span><br><span class="line">&#123;  </span><br><span class="line">    QApplication app(argc, argv);  </span><br><span class="line"> </span><br><span class="line">trueQSplitter * mainSplitter = <span class="keyword">new</span> QSplitter(Qt::Horizontal);</span><br><span class="line">truemainSplitter-&gt;setHandleWidth(<span class="number">10</span>);</span><br><span class="line">truemainSplitter-&gt;setStyleSheet(<span class="string">"QSplitter::handle &#123; background-color: black &#125;"</span>); <span class="comment">//设置分界线的样式</span></span><br><span class="line">    QLabel *label = <span class="keyword">new</span> QLabel(QObject::tr(<span class="string">"TestA"</span>));</span><br><span class="line">    QLabel *label2 = <span class="keyword">new</span> QLabel(QObject::tr(<span class="string">"TestB"</span>));</span><br><span class="line"> </span><br><span class="line">    mainSplitter-&gt;addWidget(label2);</span><br><span class="line">    mainSplitter-&gt;addWidget(label);</span><br><span class="line">    mainSplitter-&gt;setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Expanding);</span><br><span class="line">    mainSplitter-&gt;show(); </span><br><span class="line"> </span><br><span class="line">    <span class="keyword">return</span> app.exec();  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p><strong>另外，还有QStackedLayout栈布局。</strong></p>
 <p>通常应用的界面会根据不同的状态有不同的内容, 这时就可以使用 QStackedLayout 栈布局, 栈布局提供了一个页面的栈, 每个页面有完全独立的界面布局. 可以非常清晰的对不同状态下的界面进行布局管理。</p>
 <p>在 Qt 的可视化布局工具中, 通过 Stacked Widget 来完成界面的栈布局</p>
@@ -126,7 +126,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/05/21/QT布局/" data-id="ck3h76no3000a2wtswhz76xs0" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/05/21/QT布局/" data-id="ck3hd456z0004pgtsa4vg1aww" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/QT/">QT</a></li></ul>
@@ -198,6 +198,10 @@
       <ul>
         
           <li>
+            <a href="/2019/11/27/hexo站点配置内容解释/">hexo站点配置内容解释</a>
+          </li>
+        
+          <li>
             <a href="/2019/11/27/卫星时间转换/">卫星时间转换</a>
           </li>
         
@@ -211,10 +215,6 @@
         
           <li>
             <a href="/2019/06/02/天线通信/">天线通信</a>
-          </li>
-        
-          <li>
-            <a href="/2019/05/23/江阴的迈巴赫/">江阴的迈巴赫</a>
           </li>
         
       </ul>
