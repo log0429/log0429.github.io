@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>QT布局 | Hello World</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="在一个Widget中才能应用布局。 最主要的三种布局方式： QHBoxLayout：水平布局 QVBoxLayout：垂直布局 QGridLayout： 表格布局 我们使用布局方式结合控件的SizePolicy属性，来控制布局管理中的控件的尺寸自适应方式。 A. Fixed：控件不能放大或者缩小，控件的大小就是它的sizeHint。 B. Minimum：控件的sizeHint为控件的最小尺寸。控">
+<meta name="keywords" content="QT">
+<meta property="og:type" content="article">
+<meta property="og:title" content="QT布局">
+<meta property="og:url" content="http://yoursite.com/2019/05/21/QT布局/index.html">
+<meta property="og:site_name" content="Hello World">
+<meta property="og:description" content="在一个Widget中才能应用布局。 最主要的三种布局方式： QHBoxLayout：水平布局 QVBoxLayout：垂直布局 QGridLayout： 表格布局 我们使用布局方式结合控件的SizePolicy属性，来控制布局管理中的控件的尺寸自适应方式。 A. Fixed：控件不能放大或者缩小，控件的大小就是它的sizeHint。 B. Minimum：控件的sizeHint为控件的最小尺寸。控">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-21T08:45:37.410Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="QT布局">
+<meta name="twitter:description" content="在一个Widget中才能应用布局。 最主要的三种布局方式： QHBoxLayout：水平布局 QVBoxLayout：垂直布局 QGridLayout： 表格布局 我们使用布局方式结合控件的SizePolicy属性，来控制布局管理中的控件的尺寸自适应方式。 A. Fixed：控件不能放大或者缩小，控件的大小就是它的sizeHint。 B. Minimum：控件的sizeHint为控件的最小尺寸。控">
+  
+    <link rel="alternate" href="/atom.xml" title="Hello World" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hello World</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">一切开始的时候，是最美好的时光。</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/categories">categories</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-QT布局" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/05/21/QT布局/" class="article-date">
+  <time datetime="2019-05-21T07:26:33.000Z" itemprop="datePublished">2019-05-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      QT布局
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>在一个Widget中才能应用布局。</strong></p>
+<p>最主要的三种布局方式：</p>
+<p>QHBoxLayout：水平布局</p>
+<p>QVBoxLayout：垂直布局</p>
+<p>QGridLayout： 表格布局</p>
+<p><strong>我们使用布局方式结合控件的SizePolicy属性，来控制布局管理中的控件的尺寸自适应方式。</strong></p>
+<p>A. Fixed：控件不能放大或者缩小，控件的大小就是它的sizeHint。</p>
+<p>B. Minimum：控件的sizeHint为控件的最小尺寸。控件不能小于这个sizeHint，但是可以放大。</p>
+<p>C. Maximum：控件的sizeHint为控件的最大尺寸，控件不能放大，但是可以缩小到它的最小的允许尺寸。</p>
+<p>D. Preferred：控件的sizeHint是它的sizeHint，但是可以放大或者缩小。</p>
+<p>E. Expandint：控件可以自行增大或者缩小。</p>
+<p>注：sizeHint（布局管理中的控件默认尺寸，如果控件不在布局管理中就为无效的值）</p>
+<p>这个属性所保存的 QSize 类型的值是一个被推荐给widget的尺寸（并不一定就是widget的尺寸）。<br>当sizeHint的取值是一个无效值的时候（sizeHint().isValid() 返回 false，QSize 中 width 或者 height 有一个为负数就会是无效的），什么作用也没有；<br>当它是一个有效值的时候，它就成了 widget 大小的一个参考。</p>
+<p>Qt 中对 sizeHint() 的默认实现是这样的：当 widget 没有布局（layout）时，返回无效值；否则返回其 layout 的首选尺寸（preferred size）。</p>
+<p>1) 在 widget 有 layout 的情况下，其 sizeHint() 函数返回的是有效值作为其自身实际尺寸的参考；</p>
+<p>2) sizeHint() 返回的值并不一定会作为 widget 的实际尺寸，因为 widget 的尺寸的决定还有其它因素作用；</p>
+<p>如果有widgets设置了大于0的拉伸系数，接下来它们将按照拉伸系数的比例来分配空间。</p>
+<p>如果有widgets设置的拉伸系数是0，它将在没有其他widgets需要空间时获取更多空间。其中，带Expanding大小策略的widget将首先获得空间。</p>
+<p>所有分配了小于最小空间（或者设置了最小的sizehint）的widget将按要求分配最小空间。（在拉伸系数成为决定因子时，widgets没必要再用最小值或者最小hint）。<br>任何分配了大于最大空间的widget将按要求分配最大空间。（拉伸系数起着决定作用）。</p>
+<p><strong>QSpliter分割器的作用：</strong></p>
+<p>分裂器 QSplitter 是一个实体功能控件，它的基类是 QFrame，QFrame 基类正是 QWidget。</p>
+<p>QSplitter 可以独立存在，可以作为父窗口容纳多个子控件，分裂器会完全拥有内部的子控件。</p>
+<p>在 Qt 设计师或 QtCreator 设计模式左边 Widget Box 里面没有分裂器可以拖动，使用分裂器的方式是：<br>选中已有的控件，然后点击上面工具栏的水平分裂器或垂直分裂器按钮。</p>
+<p>分裂器内每个控件都有一个手柄 Handle，水平分裂器内控件的手柄在左边，垂直分裂器内控件的手柄在控件上方。<br>第0个控件的手柄是永久隐藏的，分裂器自身占据的大矩形四个边界线通常不能拖动拉大，只能拖动控件之间的手柄。</p>
+<p>分裂器整体的尺寸不是用户控制的，而在分裂器内部的控件尺寸可以让用户手工拖动手柄来控制。<br>在程序运行时，水平分裂器内各个控件的宽度、垂直分裂器内部各个控件的高度， 一般都是用户拖动手柄控制，这是分裂器和布局器最大的不同。</p>
+<p><strong>最简单的分割窗体</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;QApplication&gt;  </span><br><span class="line">#include &lt;QLabel&gt;  </span><br><span class="line">#include &lt;QSplitter&gt;</span><br><span class="line"> </span><br><span class="line">int main(int argc, char *argv[])  </span><br><span class="line">&#123;  </span><br><span class="line">    QApplication app(argc, argv);  </span><br><span class="line"> </span><br><span class="line">	QSplitter * mainSplitter = new QSplitter(Qt::Horizontal);</span><br><span class="line">	mainSplitter-&gt;setHandleWidth(10);</span><br><span class="line">	mainSplitter-&gt;setStyleSheet(&quot;QSplitter::handle &#123; background-color: black &#125;&quot;); //设置分界线的样式</span><br><span class="line">    QLabel *label = new QLabel(QObject::tr(&quot;TestA&quot;));</span><br><span class="line">    QLabel *label2 = new QLabel(QObject::tr(&quot;TestB&quot;));</span><br><span class="line"> </span><br><span class="line">    mainSplitter-&gt;addWidget(label2);</span><br><span class="line">    mainSplitter-&gt;addWidget(label);</span><br><span class="line">    mainSplitter-&gt;setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Expanding);</span><br><span class="line">    mainSplitter-&gt;show(); </span><br><span class="line"> </span><br><span class="line">    return app.exec();  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>另外，还有QStackedLayout栈布局。</strong></p>
+<p>通常应用的界面会根据不同的状态有不同的内容, 这时就可以使用 QStackedLayout 栈布局, 栈布局提供了一个页面的栈, 每个页面有完全独立的界面布局. 可以非常清晰的对不同状态下的界面进行布局管理。</p>
+<p>在 Qt 的可视化布局工具中, 通过 Stacked Widget 来完成界面的栈布局</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/05/21/QT布局/" data-id="ck3h5sojx0000c0tsxs012q1m" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/QT/">QT</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/05/22/MATLAB读取-csv数据绘图/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          MATLAB读取.csv数据绘图
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/05/20/一切最开始的时候/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">一切最开始的时候</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/博客使用/">博客使用</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/工程/">工程</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MATLAB/">MATLAB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/QT/">QT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客/">博客</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/宫灯夜明/">宫灯夜明</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工程/">工程</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/MATLAB/" style="font-size: 10px;">MATLAB</a> <a href="/tags/QT/" style="font-size: 10px;">QT</a> <a href="/tags/博客/" style="font-size: 10px;">博客</a> <a href="/tags/宫灯夜明/" style="font-size: 20px;">宫灯夜明</a> <a href="/tags/工程/" style="font-size: 10px;">工程</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">November 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/27/卫星时间转换/">卫星时间转换</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/27/hexo设置分类、标签、归档、时间线、关于/">hexo设置分类、标签、归档、时间线、关于</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/26/夏藏冬来见/">夏藏冬来见</a>
+          </li>
+        
+          <li>
+            <a href="/2019/06/02/天线通信/">天线通信</a>
+          </li>
+        
+          <li>
+            <a href="/2019/05/23/江阴的迈巴赫/">江阴的迈巴赫</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">categories</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
