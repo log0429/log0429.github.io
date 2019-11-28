@@ -98,7 +98,7 @@
 
   <meta property="og:type" content="website">
 <meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+<meta property="og:url" content="http://yoursite.com/page/2/index.html">
 <meta property="og:site_name" content="Hello World">
 <meta property="og:locale" content="zh-CN">
 <meta name="twitter:card" content="summary">
@@ -110,7 +110,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/archives/">
+  <link rel="canonical" href="http://yoursite.com/page/2/">
 
 
 
@@ -120,7 +120,7 @@
   };
 </script>
 
-  <title>归档 | Hello World</title>
+  <title>Hello World</title>
   
 
 
@@ -168,7 +168,8 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left 
+  page-home">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -261,7 +262,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
 
     
     
@@ -290,25 +291,6 @@
 
   
     
-
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
 
   
 
@@ -354,393 +336,517 @@
           
           <div id="content" class="content">
             
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
 
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/21/QT布局/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello World">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/21/QT布局/" class="post-title-link" itemprop="url">QT布局</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-21 15:26:33" itemprop="dateCreated datePublished" datetime="2019-05-21T15:26:33+08:00">2019-05-21</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-11-28 17:54:55" itemprop="dateModified" datetime="2019-11-28T17:54:55+08:00">2019-11-28</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/QT总结/" itemprop="url" rel="index"><span itemprop="name">QT总结</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-      <span class="archive-page-counter">
-        
-        
+      
+
+      
         
           
-        
-        嗯..! 目前共计 13 篇日志。 继续努力。
-      </span>
-      
+            <p><strong>在一个Widget中才能应用布局。</strong></p>
+<p>最主要的三种布局方式：</p>
+<p>QHBoxLayout：水平布局</p>
+<p>QVBoxLayout：垂直布局</p>
+<p>QGridLayout： 表格布局</p>
+<p><strong>我们使用布局方式结合控件的SizePolicy属性，来控制布局管理中的控件的尺寸自适应方式。</strong></p>
+<p>A. Fixed：控件不能放大或者缩小，控件的大小就是它的sizeHint。</p>
+<p>B. Minimum：控件的sizeHint为控件的最小尺寸。控件不能小于这个sizeHint，但是可以放大。</p>
+<p>C. Maximum：控件的sizeHint为控件的最大尺寸，控件不能放大，但是可以缩小到它的最小的允许尺寸。</p>
+<p>D. Preferred：控件的sizeHint是它的sizeHint，但是可以放大或者缩小。</p>
+<p>E. Expandint：控件可以自行增大或者缩小。</p>
+<p>注：sizeHint（布局管理中的控件默认尺寸，如果控件不在布局管理中就为无效的值）</p>
+<p>这个属性所保存的 QSize 类型的值是一个被推荐给widget的尺寸（并不一定就是widget的尺寸）。<br>当sizeHint的取值是一个无效值的时候（sizeHint().isValid() 返回 false，QSize 中 width 或者 height 有一个为负数就会是无效的），什么作用也没有；<br>当它是一个有效值的时候，它就成了 widget 大小的一个参考。</p>
+<p>Qt 中对 sizeHint() 的默认实现是这样的：当 widget 没有布局（layout）时，返回无效值；否则返回其 layout 的首选尺寸（preferred size）。</p>
+<p>1) 在 widget 有 layout 的情况下，其 sizeHint() 函数返回的是有效值作为其自身实际尺寸的参考；</p>
+<p>2) sizeHint() 返回的值并不一定会作为 widget 的实际尺寸，因为 widget 的尺寸的决定还有其它因素作用；</p>
+<p>如果有widgets设置了大于0的拉伸系数，接下来它们将按照拉伸系数的比例来分配空间。</p>
+<p>如果有widgets设置的拉伸系数是0，它将在没有其他widgets需要空间时获取更多空间。其中，带Expanding大小策略的widget将首先获得空间。</p>
+<p>所有分配了小于最小空间（或者设置了最小的sizehint）的widget将按要求分配最小空间。（在拉伸系数成为决定因子时，widgets没必要再用最小值或者最小hint）。<br>任何分配了大于最大空间的widget将按要求分配最大空间。（拉伸系数起着决定作用）。</p>
+<p><strong>QSpliter分割器的作用：</strong></p>
+<p>分裂器 QSplitter 是一个实体功能控件，它的基类是 QFrame，QFrame 基类正是 QWidget。</p>
+<p>QSplitter 可以独立存在，可以作为父窗口容纳多个子控件，分裂器会完全拥有内部的子控件。</p>
+<p>在 Qt 设计师或 QtCreator 设计模式左边 Widget Box 里面没有分裂器可以拖动，使用分裂器的方式是：<br>选中已有的控件，然后点击上面工具栏的水平分裂器或垂直分裂器按钮。</p>
+<p>分裂器内每个控件都有一个手柄 Handle，水平分裂器内控件的手柄在左边，垂直分裂器内控件的手柄在控件上方。<br>第0个控件的手柄是永久隐藏的，分裂器自身占据的大矩形四个边界线通常不能拖动拉大，只能拖动控件之间的手柄。</p>
+<p>分裂器整体的尺寸不是用户控制的，而在分裂器内部的控件尺寸可以让用户手工拖动手柄来控制。<br>在程序运行时，水平分裂器内各个控件的宽度、垂直分裂器内部各个控件的高度， 一般都是用户拖动手柄控制，这是分裂器和布局器最大的不同。</p>
+<p><strong>最简单的分割窗体</strong><br><figure class="highlight zephir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#include &lt;QApplication&gt;  </span></span><br><span class="line"><span class="comment">#include &lt;QLabel&gt;  </span></span><br><span class="line"><span class="comment">#include &lt;QSplitter&gt;</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">int</span> main(<span class="keyword">int</span> argc, <span class="keyword">char</span> *argv[])  </span><br><span class="line">&#123;  </span><br><span class="line">    QApplication app(argc, argv);  </span><br><span class="line"> </span><br><span class="line">trueQSplitter * mainSplitter = <span class="keyword">new</span> QSplitter(Qt::Horizontal);</span><br><span class="line">truemainSplitter-&gt;setHandleWidth(<span class="number">10</span>);</span><br><span class="line">truemainSplitter-&gt;setStyleSheet(<span class="string">"QSplitter::handle &#123; background-color: black &#125;"</span>); <span class="comment">//设置分界线的样式</span></span><br><span class="line">    QLabel *label = <span class="keyword">new</span> QLabel(QObject::tr(<span class="string">"TestA"</span>));</span><br><span class="line">    QLabel *label2 = <span class="keyword">new</span> QLabel(QObject::tr(<span class="string">"TestB"</span>));</span><br><span class="line"> </span><br><span class="line">    mainSplitter-&gt;addWidget(label2);</span><br><span class="line">    mainSplitter-&gt;addWidget(label);</span><br><span class="line">    mainSplitter-&gt;setSizePolicy(QSizePolicy::Expanding,QSizePolicy::Expanding);</span><br><span class="line">    mainSplitter-&gt;show(); </span><br><span class="line"> </span><br><span class="line">    <span class="keyword">return</span> app.exec();  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p><strong>另外，还有QStackedLayout栈布局。</strong></p>
+<p>通常应用的界面会根据不同的状态有不同的内容, 这时就可以使用 QStackedLayout 栈布局, 栈布局提供了一个页面的栈, 每个页面有完全独立的界面布局. 可以非常清晰的对不同状态下的界面进行布局管理。</p>
+<p>在 Qt 的可视化布局工具中, 通过 Stacked Widget 来完成界面的栈布局</p>
 
-      
-
-        
-        
-        
-
-        
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2019">2019</h1>
-          </div>
         
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/11/28/next主题-添加站内搜索/" itemprop="url">
-            
-              <span itemprop="name">next主题-添加站内搜索</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-11-28T22:12:58+08:00" content="2019-11-28">
-          11-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/11/28/next主题-网站语言修改/" itemprop="url">
-            
-              <span itemprop="name">next主题-网站语言修改</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-11-28T19:13:08+08:00" content="2019-11-28">
-          11-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/11/28/next主题-添加tags和categories/" itemprop="url">
-            
-              <span itemprop="name">next主题-添加tags和categories</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-11-28T18:01:06+08:00" content="2019-11-28">
-          11-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/11/27/hexo站点配置内容解释/" itemprop="url">
-            
-              <span itemprop="name">hexo站点配置内容解释</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-11-27T21:22:34+08:00" content="2019-11-27">
-          11-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/11/27/卫星时间转换/" itemprop="url">
-            
-              <span itemprop="name">卫星时间转换</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-11-27T17:27:22+08:00" content="2019-11-27">
-          11-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/11/27/hexo设置分类、标签、归档、时间线、关于/" itemprop="url">
-            
-              <span itemprop="name">hexo设置分类、标签、归档、时间线、关于</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-11-27T15:16:11+08:00" content="2019-11-27">
-          11-27
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/11/26/夏藏冬来见/" itemprop="url">
-            
-              <span itemprop="name">夏藏冬来见</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-11-26T14:43:51+08:00" content="2019-11-26">
-          11-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/06/02/天线通信/" itemprop="url">
-            
-              <span itemprop="name">天线通信</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-06-02T14:20:52+08:00" content="2019-06-02">
-          06-02
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/05/23/江阴的迈巴赫/" itemprop="url">
-            
-              <span itemprop="name">江阴的迈巴赫</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-23T22:22:27+08:00" content="2019-05-23">
-          05-23
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/05/22/MATLAB读取-csv数据绘图/" itemprop="url">
-            
-              <span itemprop="name">MATLAB读取.csv数据绘图</span>
-            
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2019-05-22T10:53:27+08:00" content="2019-05-22">
-          05-22
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
   </div>
   
   
   
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/20/一切最开始的时候/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello World">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/20/一切最开始的时候/" class="post-title-link" itemprop="url">一切最开始的时候</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-20 23:16:43" itemprop="dateCreated datePublished" datetime="2019-05-20T23:16:43+08:00">2019-05-20</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-21 16:42:28" itemprop="dateModified" datetime="2019-05-21T16:42:28+08:00">2019-05-21</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>一切最开始的时候，是最美的时光。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/19/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello World">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/19/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-19 10:54:23" itemprop="dateCreated datePublished" datetime="2019-05-19T10:54:23+08:00">2019-05-19</time>
+            
+
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
 
   
   <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
   </nav>
-
 
 
 
