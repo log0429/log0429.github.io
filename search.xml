@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>next主题-头像设置</title>
+      <link href="/2019/12/01/next%E4%B8%BB%E9%A2%98-%E5%A4%B4%E5%83%8F%E8%AE%BE%E7%BD%AE/"/>
+      <url>/2019/12/01/next%E4%B8%BB%E9%A2%98-%E5%A4%B4%E5%83%8F%E8%AE%BE%E7%BD%AE/</url>
+      
+        <content type="html"><![CDATA[<p><img src="/images/next主题-添加头像.gif" alt></p><h2 id="添加头像"><a href="#添加头像" class="headerlink" title="添加头像"></a>添加头像</h2><p>打开<code>themes/next</code>下的<code>_config.yml</code>文件，搜索<code>Sidebar Avatar</code>关键字，在<code>url:</code>后面加入你的头像图片路径。<br>可以使用本地图片,把图片放入<code>themes/next/source/images</code>下,加入图片路径如下：<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># Sidebar Avatar</span></span><br><span class="line"><span class="symbol">avatar:</span></span><br><span class="line">  <span class="meta"># In theme directory (source/images): /images/avatar.gif</span></span><br><span class="line">  <span class="meta"># In site directory (source/uploads): /uploads/avatar.gif</span></span><br><span class="line">  <span class="meta"># You can also use other linking images.</span></span><br><span class="line"><span class="symbol">  url:</span> <span class="meta-keyword">/images/</span>奔跑吧你会更强大.jpg</span><br></pre></td></tr></table></figure></p><h2 id="设置头像边框为圆形框-鼠标放置头像上旋转"><a href="#设置头像边框为圆形框-鼠标放置头像上旋转" class="headerlink" title="设置头像边框为圆形框  鼠标放置头像上旋转"></a>设置头像边框为圆形框  鼠标放置头像上旋转</h2><p>将rounded置为true可以设置头像边框为圆形框，将rotated置为true可以设置鼠标放置头像上旋转效果。<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Sidebar Avatar</span></span><br><span class="line"><span class="attr">avatar:</span></span><br><span class="line">  <span class="comment"># In theme directory (source/images): /images/avatar.gif</span></span><br><span class="line">  <span class="comment"># In site directory (source/uploads): /uploads/avatar.gif</span></span><br><span class="line">  <span class="comment"># You can also use other linking images.</span></span><br><span class="line"><span class="attr">  url:</span> <span class="string">/images/奔跑吧你会更强大.jpg</span></span><br><span class="line">  <span class="comment"># If true, the avatar would be dispalyed in circle.</span></span><br><span class="line"><span class="attr">  rounded:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.</span></span><br><span class="line"><span class="attr">  opacity:</span> <span class="number">1</span></span><br><span class="line">  <span class="comment"># If true, the avatar would be rotated with the cursor.</span></span><br><span class="line"><span class="attr">  rotated:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo使用教程 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+            <tag> next主题 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>PLC__编程注意事项</title>
       <link href="/2019/11/30/PLC-%E7%BC%96%E7%A8%8B%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/"/>
       <url>/2019/11/30/PLC-%E7%BC%96%E7%A8%8B%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</url>

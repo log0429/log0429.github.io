@@ -353,12 +353,175 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/01/next主题-头像设置/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="又来偷偷看我啦">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/奔跑吧你会更强大.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello World">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/12/01/next主题-头像设置/" class="post-title-link" itemprop="url">next主题-头像设置</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-12-01 23:04:52 / 修改时间：23:44:13" itemprop="dateCreated datePublished" datetime="2019-12-01T23:04:52+08:00">2019-12-01</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/hexo使用教程/" itemprop="url" rel="index"><span itemprop="name">hexo使用教程</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="/images/next主题-添加头像.gif" alt></p>
+<h2 id="添加头像"><a href="#添加头像" class="headerlink" title="添加头像"></a>添加头像</h2><p>打开<code>themes/next</code>下的<code>_config.yml</code>文件，搜索<code>Sidebar Avatar</code>关键字，在<code>url:</code>后面加入你的头像图片路径。<br>可以使用本地图片,把图片放入<code>themes/next/source/images</code>下,加入图片路径如下：<br><figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta"># Sidebar Avatar</span></span><br><span class="line"><span class="symbol">avatar:</span></span><br><span class="line">  <span class="meta"># In theme directory (source/images): /images/avatar.gif</span></span><br><span class="line">  <span class="meta"># In site directory (source/uploads): /uploads/avatar.gif</span></span><br><span class="line">  <span class="meta"># You can also use other linking images.</span></span><br><span class="line"><span class="symbol">  url:</span> <span class="meta-keyword">/images/</span>奔跑吧你会更强大.jpg</span><br></pre></td></tr></table></figure></p>
+<h2 id="设置头像边框为圆形框-鼠标放置头像上旋转"><a href="#设置头像边框为圆形框-鼠标放置头像上旋转" class="headerlink" title="设置头像边框为圆形框  鼠标放置头像上旋转"></a>设置头像边框为圆形框  鼠标放置头像上旋转</h2><p>将rounded置为true可以设置头像边框为圆形框，将rotated置为true可以设置鼠标放置头像上旋转效果。<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Sidebar Avatar</span></span><br><span class="line"><span class="attr">avatar:</span></span><br><span class="line">  <span class="comment"># In theme directory (source/images): /images/avatar.gif</span></span><br><span class="line">  <span class="comment"># In site directory (source/uploads): /uploads/avatar.gif</span></span><br><span class="line">  <span class="comment"># You can also use other linking images.</span></span><br><span class="line"><span class="attr">  url:</span> <span class="string">/images/奔跑吧你会更强大.jpg</span></span><br><span class="line">  <span class="comment"># If true, the avatar would be dispalyed in circle.</span></span><br><span class="line"><span class="attr">  rounded:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># The value of opacity should be choose from 0 to 1 to set the opacity of the avatar.</span></span><br><span class="line"><span class="attr">  opacity:</span> <span class="number">1</span></span><br><span class="line">  <span class="comment"># If true, the avatar would be rotated with the cursor.</span></span><br><span class="line"><span class="attr">  rotated:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/30/PLC-编程注意事项/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="又来偷偷看我啦">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/奔跑吧你会更强大1.jpg">
+      <meta itemprop="image" content="/images/奔跑吧你会更强大.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -532,7 +695,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="又来偷偷看我啦">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/奔跑吧你会更强大1.jpg">
+      <meta itemprop="image" content="/images/奔跑吧你会更强大.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -747,7 +910,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="又来偷偷看我啦">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/奔跑吧你会更强大1.jpg">
+      <meta itemprop="image" content="/images/奔跑吧你会更强大.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -937,7 +1100,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="又来偷偷看我啦">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/奔跑吧你会更强大1.jpg">
+      <meta itemprop="image" content="/images/奔跑吧你会更强大.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1109,7 +1272,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="又来偷偷看我啦">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/奔跑吧你会更强大1.jpg">
+      <meta itemprop="image" content="/images/奔跑吧你会更强大.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1380,7 +1543,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="又来偷偷看我啦">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/奔跑吧你会更强大1.jpg">
+      <meta itemprop="image" content="/images/奔跑吧你会更强大.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1547,7 +1710,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="又来偷偷看我啦">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/奔跑吧你会更强大1.jpg">
+      <meta itemprop="image" content="/images/奔跑吧你会更强大.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1718,7 +1881,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="又来偷偷看我啦">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/奔跑吧你会更强大1.jpg">
+      <meta itemprop="image" content="/images/奔跑吧你会更强大.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -1882,7 +2045,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="又来偷偷看我啦">
       <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/奔跑吧你会更强大1.jpg">
+      <meta itemprop="image" content="/images/奔跑吧你会更强大.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -2035,174 +2198,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/27/卫星时间转换/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="又来偷偷看我啦">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/奔跑吧你会更强大1.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hello World">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/11/27/卫星时间转换/" class="post-title-link" itemprop="url">卫星时间转换</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-11-27 17:27:22 / 修改时间：20:46:19" itemprop="dateCreated datePublished" datetime="2019-11-27T17:27:22+08:00">2019-11-27</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工程/" itemprop="url" rel="index"><span itemprop="name">工程</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="几个概念"><a href="#几个概念" class="headerlink" title="几个概念"></a>几个概念</h2><h3 id="1-两种时间计量系统"><a href="#1-两种时间计量系统" class="headerlink" title="1.两种时间计量系统"></a>1.两种时间计量系统</h3><p>科学上有两种时间计量系统：基于地球自转的天文测量而得出的“世界时”和以原子振荡周期确定的“原子时”。“世界时”由于地球自转的不稳定（由地球物质分布不均匀和其它星球的摄动力等引起的）会带来时间的差异，“原子时”（一种较恒定的时制，由原子钟得出）则是相对恒定不变的。这两种时间尺度速率上的差异，一般来说一至二年会差大约1秒时间。<br>1971年国际计量大会通过决议：使用“协调世界时”来计量时间。当“协调世界时”和“世界时”之差超过0.9秒时，国际地球自转服务组织（IERS）就负责对“协调世界时”拨快或拨慢1秒，这就是闰秒。</p>
-<h3 id="2-跳秒（leap-seconds）"><a href="#2-跳秒（leap-seconds）" class="headerlink" title="2.跳秒（leap seconds）"></a>2.跳秒（leap seconds）</h3><p>跳秒，也叫闰秒，是指为保持协调世界时接近于世界时时刻，由国际计量局统一规定在年底或年中（也可能在季末）对协调世界时增加或减少1秒的调整。<br>成因：由于地球自转的不均匀性和长期变慢性（主要由潮汐摩擦引起的），会使世界时（民用时）和原子时之间相差超过到±0.9秒时，就把协调世界时向前拨1秒（负闰秒，最后一分钟为59秒）或向后拨1秒（正闰秒，最后一分钟为61秒）； 闰秒一般加在公历年末或公历六月末。</p>
-<h3 id="3-UTC时间"><a href="#3-UTC时间" class="headerlink" title="3.UTC时间"></a>3.UTC时间</h3><p>我们通常生活的所用的时间都是UTC时间，即世界协调时。它起源于世界时，世界时系统是以地球自转运动为基准的时间系统。也就是我们根据地球自转，公转确定的24小时，一年365天，然后再细分到秒。而世界协调时的秒不是世界时的秒，而是采用了原子时的秒（国际单位制的秒）。原因是世界时受地球自转的影响比较大，地球还受到其他因素的影响，比如极移，岁差等因素的影响。总之，世界时（跟地球有关的时间系统）并不是严格均匀的时间系统，世界协调时是为了调节人们生活的时间和GPS原子时之间的差异而发明的一种时间系统。</p>
-<h3 id="4-GPS时间"><a href="#4-GPS时间" class="headerlink" title="4.GPS时间"></a>4.GPS时间</h3><p>GPS时间，也就是GPS原子时，它的时间基准是1980年1月6日0点与世界协调时刻相一致，以后按原子时秒长累积计时。GPS时间跟UTC时间之差为秒的整倍数。如1989年为5秒，1996年为11秒，2002年为13秒。<br>也就是说，时间基准，两套时间系统从1980年1月6日 开始一样，但是因为两个时间系统的秒长不一样，也就是我们所说的时间尺度不一样，最终随着时间的累积，两者之间就会差。而世界协调时为了协调人们生活中的时间，就采用了跳秒的办法来处理这种差异。</p>
-<h3 id="5-BDT时间（北斗时间）"><a href="#5-BDT时间（北斗时间）" class="headerlink" title="5.BDT时间（北斗时间）"></a>5.BDT时间（北斗时间）</h3><p>BDS采用的时间基准为北斗时（BDT），它是一种原子时，以国际单位制（SI）秒为基本单位而连续累计，不用调秒的形式，起始历元为协调世界时（UTC）2006年1月1日0时0分0秒，采用周和周内秒的计数形式。BDT与UTC之间的跳秒信息在卫星播放的导航电文中播报。此外由于存在着闰秒的影响，从GPST的起算时间1980年1月6日0时0分0秒到BDT的起算时间2006年1月1日0时0分0秒共有正闰秒14s,所以BDT和GPST周秒间存在14秒的差异。</p>
-<h2 id="时间转换代码"><a href="#时间转换代码" class="headerlink" title="时间转换代码"></a>时间转换代码</h2><figure class="highlight excel"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">#include &lt;math.h&gt;</span><br><span class="line"></span><br><span class="line">/* <span class="built_in">type</span> definitions ----------------------------------------------------------*/</span><br><span class="line"></span><br><span class="line">typedef struct &#123;        /* <span class="built_in">time</span> struct */</span><br><span class="line">truetime_t <span class="built_in">time</span>;        /* <span class="built_in">time</span> (s) expressed by standard time_t */</span><br><span class="line">truedouble <span class="built_in">sec</span>;         /* fraction of <span class="built_in">second</span> under <span class="number">1</span> s */</span><br><span class="line">&#125; gtime_t;</span><br><span class="line"></span><br><span class="line">static double leaps[<span class="number">64</span> + <span class="number">1</span>][<span class="number">7</span>] = &#123; /* leap seconds (y,m,d,h,m,s,utc-gpst) */</span><br><span class="line">true&#123; <span class="number">2017</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,-<span class="number">18</span> &#125;,</span><br><span class="line">true&#123; <span class="number">2015</span>,<span class="number">7</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,-<span class="number">17</span> &#125;,</span><br><span class="line">true&#123; <span class="number">2012</span>,<span class="number">7</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,-<span class="number">16</span> &#125;,</span><br><span class="line">true&#123; <span class="number">2009</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,-<span class="number">15</span> &#125;,</span><br><span class="line">true&#123; <span class="number">2006</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,-<span class="number">14</span> &#125;,</span><br><span class="line">true&#123; <span class="number">1999</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,-<span class="number">13</span> &#125;,</span><br><span class="line">true&#123; <span class="number">1997</span>,<span class="number">7</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,-<span class="number">12</span> &#125;,</span><br><span class="line">true&#123; <span class="number">1996</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,-<span class="number">11</span> &#125;,</span><br><span class="line">true&#123; <span class="number">1994</span>,<span class="number">7</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>,-<span class="number">10</span> &#125;,</span><br><span class="line">true&#123; <span class="number">1993</span>,<span class="number">7</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>, -<span class="number">9</span> &#125;,</span><br><span class="line">true&#123; <span class="number">1992</span>,<span class="number">7</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>, -<span class="number">8</span> &#125;,</span><br><span class="line">true&#123; <span class="number">1991</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>, -<span class="number">7</span> &#125;,</span><br><span class="line">true&#123; <span class="number">1990</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>, -<span class="number">6</span> &#125;,</span><br><span class="line">true&#123; <span class="number">1988</span>,<span class="number">1</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>, -<span class="number">5</span> &#125;,</span><br><span class="line">true&#123; <span class="number">1985</span>,<span class="number">7</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>, -<span class="number">4</span> &#125;,</span><br><span class="line">true&#123; <span class="number">1983</span>,<span class="number">7</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>, -<span class="number">3</span> &#125;,</span><br><span class="line">true&#123; <span class="number">1982</span>,<span class="number">7</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>, -<span class="number">2</span> &#125;,</span><br><span class="line">true&#123; <span class="number">1981</span>,<span class="number">7</span>,<span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span>, -<span class="number">1</span> &#125;,</span><br><span class="line">true&#123; <span class="number">0</span> &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">static const double gpst0[] = &#123; <span class="number">1980</span>,<span class="number">1</span>, <span class="number">6</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span> &#125;; /* gps <span class="built_in">time</span> reference */</span><br><span class="line">static const double bdt0[] = &#123; <span class="number">2006</span>,<span class="number">1</span>, <span class="number">1</span>,<span class="number">0</span>,<span class="number">0</span>,<span class="number">0</span> &#125;; /* beidou <span class="built_in">time</span> reference */</span><br><span class="line"></span><br><span class="line">/* add <span class="built_in">time</span> --------------------------------------------------------------------</span><br><span class="line">* add <span class="built_in">time</span> to gtime_t struct</span><br><span class="line">* args   <span class="symbol">:</span> gtime_t <span class="built_in">t</span>        I   gtime_t struct</span><br><span class="line">*          double <span class="built_in">sec</span>       I   <span class="built_in">time</span> to add (s)</span><br><span class="line">* return <span class="symbol">:</span> gtime_t struct (<span class="built_in">t</span>+<span class="built_in">sec</span>)</span><br><span class="line">*-----------------------------------------------------------------------------*/</span><br><span class="line">extern gtime_t timeadd(gtime_t <span class="built_in">t</span>, double <span class="built_in">sec</span>)</span><br><span class="line">&#123;</span><br><span class="line">truedouble tt;</span><br><span class="line"></span><br><span class="line">truet.sec += <span class="built_in">sec</span>; tt = <span class="built_in">floor</span>(t.sec); t.time += (<span class="built_in">int</span>)tt; t.sec -= tt;</span><br><span class="line">truereturn <span class="built_in">t</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* <span class="built_in">convert</span> calendar <span class="built_in">day</span>/<span class="built_in">time</span> to <span class="built_in">time</span> -------------------------------------------</span><br><span class="line">* <span class="built_in">convert</span> calendar <span class="built_in">day</span>/<span class="built_in">time</span> to gtime_t struct</span><br><span class="line">* args   <span class="symbol">:</span> double *ep       I   <span class="built_in">day</span>/<span class="built_in">time</span> &#123;<span class="built_in">year</span>,<span class="built_in">month</span>,<span class="built_in">day</span>,<span class="built_in">hour</span>,<span class="built_in">min</span>,<span class="built_in">sec</span>&#125;</span><br><span class="line">* return <span class="symbol">:</span> gtime_t struct</span><br><span class="line">* notes  <span class="symbol">:</span> <span class="built_in">proper</span> in <span class="number">1970</span>-<span class="number">2037</span> <span class="built_in">or</span> <span class="number">1970</span>-<span class="number">2099</span> (<span class="number">64</span>bit time_t)</span><br><span class="line">*-----------------------------------------------------------------------------*/</span><br><span class="line">extern gtime_t epoch2time(const double *ep)</span><br><span class="line">&#123;</span><br><span class="line">trueconst <span class="built_in">int</span> doy[] = &#123; <span class="number">1</span>,<span class="number">32</span>,<span class="number">60</span>,<span class="number">91</span>,<span class="number">121</span>,<span class="number">152</span>,<span class="number">182</span>,<span class="number">213</span>,<span class="number">244</span>,<span class="number">274</span>,<span class="number">305</span>,<span class="number">335</span> &#125;;</span><br><span class="line">truegtime_t <span class="built_in">time</span> = &#123; <span class="number">0</span> &#125;;</span><br><span class="line">true<span class="built_in">int</span> <span class="built_in">days</span>, <span class="built_in">sec</span>, <span class="built_in">year</span> = (<span class="built_in">int</span>)ep[<span class="number">0</span>], mon = (<span class="built_in">int</span>)ep[<span class="number">1</span>], <span class="built_in">day</span> = (<span class="built_in">int</span>)ep[<span class="number">2</span>];</span><br><span class="line"></span><br><span class="line">true<span class="built_in">if</span> (<span class="built_in">year</span>&lt;<span class="number">1970</span> || <span class="number">2099</span>&lt;<span class="built_in">year</span> || mon&lt;<span class="number">1</span> || <span class="number">12</span>&lt;mon) return <span class="built_in">time</span>;</span><br><span class="line"></span><br><span class="line">true/* leap <span class="built_in">year</span> <span class="built_in">if</span> <span class="built_in">year</span>%<span class="number">4</span>==<span class="number">0</span> in <span class="number">1901</span>-<span class="number">2099</span> */</span><br><span class="line">true<span class="built_in">days</span> = (<span class="built_in">year</span> - <span class="number">1970</span>) * <span class="number">365</span> + (<span class="built_in">year</span> - <span class="number">1969</span>) / <span class="number">4</span> + doy[mon - <span class="number">1</span>] + <span class="built_in">day</span> - <span class="number">2</span> + (<span class="built_in">year</span> % <span class="number">4</span> == <span class="number">0</span> &amp;&amp; mon &gt;= <span class="number">3</span> ? <span class="number">1</span> <span class="symbol">:</span> <span class="number">0</span>);</span><br><span class="line">true<span class="built_in">sec</span> = (<span class="built_in">int</span>)<span class="built_in">floor</span>(ep[<span class="number">5</span>]);</span><br><span class="line">truetime.time = (time_t)<span class="built_in">days</span> * <span class="number">86400</span> + (<span class="built_in">int</span>)ep[<span class="number">3</span>] * <span class="number">3600</span> + (<span class="built_in">int</span>)ep[<span class="number">4</span>] * <span class="number">60</span> + <span class="built_in">sec</span>;</span><br><span class="line">truetime.sec = ep[<span class="number">5</span>] - <span class="built_in">sec</span>;</span><br><span class="line">truereturn <span class="built_in">time</span>;</span><br><span class="line">&#125;</span><br><span class="line">/* gps <span class="built_in">time</span> to <span class="built_in">time</span> ------------------------------------------------------------</span><br><span class="line">* <span class="built_in">convert</span> week <span class="built_in">and</span> tow in gps <span class="built_in">time</span> to gtime_t struct</span><br><span class="line">* args   <span class="symbol">:</span> <span class="built_in">int</span>    week      I   week number in gps <span class="built_in">time</span></span><br><span class="line">*          double <span class="built_in">sec</span>       I   <span class="built_in">time</span> of week in gps <span class="built_in">time</span> (s)</span><br><span class="line">* return <span class="symbol">:</span> gtime_t struct</span><br><span class="line">*-----------------------------------------------------------------------------*/</span><br><span class="line">extern gtime_t gpst2time(<span class="built_in">int</span> week, double <span class="built_in">sec</span>)</span><br><span class="line">&#123;</span><br><span class="line">truegtime_t <span class="built_in">t</span> = epoch2time(gpst0);</span><br><span class="line"></span><br><span class="line">true<span class="built_in">if</span> (<span class="built_in">sec</span>&lt;-<span class="number">1</span>E9 || <span class="number">1</span>E9&lt;<span class="built_in">sec</span>) <span class="built_in">sec</span> = <span class="number">0.0</span>;</span><br><span class="line">truet.time += (time_t)<span class="number">86400</span> * <span class="number">7</span> * week + (<span class="built_in">int</span>)<span class="built_in">sec</span>;</span><br><span class="line">truet.sec = <span class="built_in">sec</span> - (<span class="built_in">int</span>)<span class="built_in">sec</span>;</span><br><span class="line">truereturn <span class="built_in">t</span>;</span><br><span class="line">&#125;</span><br><span class="line">/* <span class="built_in">time</span> to bd <span class="built_in">time</span> ------------------------------------------------------------</span><br><span class="line">* <span class="built_in">convert</span> gtime_t struct to week <span class="built_in">and</span> tow in bd <span class="built_in">time</span></span><br><span class="line">* args   <span class="symbol">:</span> gtime_t <span class="built_in">t</span>        I   gtime_t struct</span><br><span class="line">*          <span class="built_in">int</span>    *week     IO  week number in bd <span class="built_in">time</span> (NU<span class="symbol">LL:</span> no output)</span><br><span class="line">* return <span class="symbol">:</span> <span class="built_in">time</span> of week in bd <span class="built_in">time</span> (s)</span><br><span class="line">*-----------------------------------------------------------------------------*/</span><br><span class="line">extern double time2bdt(gtime_t <span class="built_in">t</span>, <span class="built_in">int</span> *week)</span><br><span class="line">&#123;</span><br><span class="line">truegtime_t <span class="symbol">t0</span> = epoch2time(bdt0);</span><br><span class="line">truetime_t <span class="built_in">sec</span> = t.time - <span class="symbol">t0</span>.<span class="built_in">time</span>;</span><br><span class="line">true<span class="built_in">int</span> w = (<span class="built_in">int</span>)(<span class="built_in">sec</span> / (<span class="number">86400</span> * <span class="number">7</span>));</span><br><span class="line"></span><br><span class="line">true<span class="built_in">if</span> (week) *week = w;</span><br><span class="line">truereturn (double)(<span class="built_in">sec</span> - (double)w * <span class="number">86400</span> * <span class="number">7</span>) + t.sec;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/* gps周+周内秒 转换成 bd周+周内----------------------------------------------</span><br><span class="line">* gps周+周内秒 转换成 bd周+周内秒</span><br><span class="line">* args   <span class="symbol">:</span> <span class="built_in">int</span>    gpst_week      I   week number in gps <span class="built_in">time</span></span><br><span class="line">*          double gpst_sec       I   <span class="built_in">time</span> of week in gps <span class="built_in">time</span> (s)</span><br><span class="line">*		   <span class="built_in">int</span>    *pbdt_week     O   week number in bd <span class="built_in">time</span></span><br><span class="line">*          double *pbdt_sec      O   <span class="built_in">time</span> of week in bd <span class="built_in">time</span> (s)</span><br><span class="line">*-----------------------------------------------------------------------------*/</span><br><span class="line">void gpsweekt2bdweekt(<span class="built_in">int</span> gpst_week, double gpst_sec,<span class="built_in">int</span> *pbdt_week, double *pbdt_sec)</span><br><span class="line">&#123;</span><br><span class="line">truegtime_t gps_time = &#123; <span class="number">0</span> &#125;;</span><br><span class="line">truegtime_t bd_time = &#123; <span class="number">0</span> &#125;;</span><br><span class="line">true<span class="built_in">int</span> bdt_week = <span class="number">0</span>;</span><br><span class="line">truedouble bdt_sec = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">truegps_time = gpst2time(gpst_week, gpst_sec);</span><br><span class="line">truebd_time = timeadd(gps_time, -<span class="number">14.0</span>);</span><br><span class="line">truebdt_sec = time2bdt(bd_time, &amp;bdt_week);</span><br><span class="line">true</span><br><span class="line">true*pbdt_week = bdt_week;</span><br><span class="line">true*pbdt_sec = bdt_sec;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/* <span class="built_in">convert</span> <span class="built_in">time</span> to calendar <span class="built_in">day</span>/<span class="built_in">time</span> -------------------------------------------</span><br><span class="line">* <span class="built_in">convert</span> gtime_t struct to calendar <span class="built_in">day</span>/<span class="built_in">time</span> </span><br><span class="line">* args   <span class="symbol">:</span> gtime_t <span class="built_in">T</span>        I   gtime_t struct</span><br><span class="line">           double *ep       O   <span class="built_in">day</span>/<span class="built_in">time</span> &#123;<span class="built_in">year</span>,<span class="built_in">month</span>,<span class="built_in">day</span>,<span class="built_in">hour</span>,<span class="built_in">min</span>,<span class="built_in">sec</span>&#125;</span><br><span class="line">* return <span class="symbol">:</span> none</span><br><span class="line">* notes  <span class="symbol">:</span> <span class="built_in">proper</span> in <span class="number">1970</span>-<span class="number">2037</span> <span class="built_in">or</span> <span class="number">1970</span>-<span class="number">2099</span> (<span class="number">64</span>bit time_t)</span><br><span class="line">*-----------------------------------------------------------------------------*/</span><br><span class="line">extern void time2epoch (gtime_t <span class="built_in">t</span>, double *ep)</span><br><span class="line">&#123;</span><br><span class="line">trueconst <span class="built_in">int</span> mday[] = &#123;	/* # of <span class="built_in">days</span> in a <span class="built_in">month</span> */</span><br><span class="line">true<span class="number">31</span>,<span class="number">28</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">31</span>,<span class="number">28</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,</span><br><span class="line">true<span class="number">31</span>,<span class="number">29</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">31</span>,<span class="number">28</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,<span class="number">30</span>,<span class="number">31</span>,</span><br><span class="line">true&#125;;</span><br><span class="line">true<span class="built_in">int</span> <span class="built_in">days</span>, <span class="built_in">sec</span>, mon, <span class="built_in">day</span>;</span><br><span class="line">truetrue</span><br><span class="line">true<span class="built_in">days</span> = (<span class="built_in">int</span>)(t.time / <span class="number">86400</span>);</span><br><span class="line">true<span class="built_in">sec</span>  = (<span class="built_in">int</span>)(t.time-(time_t)<span class="built_in">days</span>*<span class="number">86400</span>);</span><br><span class="line">true</span><br><span class="line">truefor(<span class="built_in">day</span> = <span class="built_in">days</span>%<span class="number">1461</span>,mon=<span class="number">0</span>;mon&lt;<span class="number">48</span>;mon++)&#123;</span><br><span class="line">truetrue<span class="built_in">if</span>(<span class="built_in">day</span>&gt;mday[mon]) <span class="built_in">day</span> -= mday[mon];</span><br><span class="line">truetrueelse break;</span><br><span class="line">true&#125;</span><br><span class="line"></span><br><span class="line">trueep[<span class="number">0</span>] = <span class="number">1970</span> + <span class="built_in">days</span>/<span class="number">1461</span>*<span class="number">4</span> + mon/<span class="number">12</span>; ep[<span class="number">1</span>] = mon%<span class="number">12</span> + <span class="number">1</span>; ep[<span class="number">2</span>] = <span class="built_in">day</span> + <span class="number">1</span>;</span><br><span class="line">trueep[<span class="number">3</span>] = <span class="built_in">sec</span>/<span class="number">3600</span>; ep[<span class="number">4</span>] = <span class="built_in">sec</span>%<span class="number">3600</span>/<span class="number">60</span>; ep[<span class="number">5</span>] = <span class="built_in">sec</span>%<span class="number">60</span> + t.sec;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">/* <span class="built_in">time</span> difference -------------------------------------------------------------</span><br><span class="line">* difference between gtime_t structs</span><br><span class="line">* args   <span class="symbol">:</span> gtime_t <span class="symbol">t1</span>,<span class="symbol">t2</span>    I   gtime_t structs</span><br><span class="line">* return <span class="symbol">:</span> <span class="built_in">time</span> difference (<span class="symbol">t1</span>-<span class="symbol">t2</span>) (s)</span><br><span class="line">*-----------------------------------------------------------------------------*/</span><br><span class="line">extern double timediff(gtime_t <span class="symbol">t1</span>, gtime_t <span class="symbol">t2</span>)</span><br><span class="line">&#123;</span><br><span class="line">truereturn (<span class="symbol">t1</span>.<span class="built_in">time</span> - <span class="symbol">t2</span>.<span class="built_in">time</span> + <span class="symbol">t1</span>.<span class="built_in">sec</span> - <span class="symbol">t2</span>.<span class="built_in">sec</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">extern gtime_t gps_time2utc_time(gtime_t <span class="built_in">t</span>)</span><br><span class="line">&#123;</span><br><span class="line">truegtime_t tu;</span><br><span class="line">true<span class="built_in">int</span> i;</span><br><span class="line">truefor(i=<span class="number">0</span>;leaps[i][<span class="number">0</span>]&gt;<span class="number">0</span>;i++)&#123;</span><br><span class="line">truetruetu = timeadd(<span class="built_in">t</span>,leaps[i][<span class="number">6</span>]);</span><br><span class="line">truetrue<span class="built_in">if</span>( timediff(tu,epoch2time(leaps[i]))&gt;=<span class="number">0.0</span> ) return tu;</span><br><span class="line">true&#125;</span><br><span class="line">truereturn <span class="built_in">t</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">void gpsweekt2utcepoch(<span class="built_in">int</span> gpst_week, double gpst_sec,double *ep)</span><br><span class="line">&#123;</span><br><span class="line">truegtime_t gps_time,utc_time;</span><br><span class="line">true</span><br><span class="line">truegps_time = gpst2time(gpst_week,gpst_sec);</span><br><span class="line">trueutc_time = gps_time2utc_time(gps_time);</span><br><span class="line">truetime2epoch(utc_time,ep);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">int</span> main()</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">/*	<span class="built_in">int</span> gpst_week = <span class="number">1826</span>;</span><br><span class="line">truedouble gpst_sec = <span class="number">522628.45</span>;*/</span><br><span class="line">true<span class="built_in">int</span> gpst_week = <span class="number">2033</span>;</span><br><span class="line">truedouble gpst_sec = <span class="number">114487.200</span>;</span><br><span class="line"></span><br><span class="line">true<span class="built_in">int</span> bdt_week = <span class="number">0</span>;</span><br><span class="line">truedouble bdt_sec = <span class="number">0</span>;</span><br><span class="line">truedouble ep[<span class="number">6</span>]=&#123;<span class="number">0.0</span>&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">truegpsweekt2bdweekt(gpst_week, gpst_sec,&amp;bdt_week,&amp;bdt_sec);</span><br><span class="line"></span><br><span class="line">trueprintf(<span class="string">"gpst_week=%d\t gpst_sec=%lf\n"</span>,gpst_week,gpst_sec);</span><br><span class="line">trueprintf(<span class="string">"bdt_week =%d\t  bdt_sec=%lf\n"</span>, bdt_week,bdt_sec);</span><br><span class="line"></span><br><span class="line">truegpsweekt2utcepoch(gpst_week, gpst_sec, ep);</span><br><span class="line"></span><br><span class="line">trueprintf(<span class="string">"year=%lf\t month=%lf\t day=%lf\t hour=%lf\t min=%lf\t sec=%lf"</span>,ep[<span class="number">0</span>],ep[<span class="number">1</span>],ep[<span class="number">2</span>],ep[<span class="number">3</span>],ep[<span class="number">4</span>],ep[<span class="number">5</span>]);//<span class="built_in">year</span>,<span class="built_in">month</span>,<span class="built_in">day</span>,<span class="built_in">hour</span>,<span class="built_in">min</span>,<span class="built_in">sec</span></span><br><span class="line"></span><br><span class="line">truegetchar();</span><br><span class="line">truereturn <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>以上代码运行结果：<br><img src="/images/卫星时间转换运行结果.jpg" alt></p>
-<p><strong>参考文献：</strong><br>孙辉，王辽杰，陈洪卿.北斗系统时BDT解析</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2238,7 +2233,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/奔跑吧你会更强大1.jpg" alt="又来偷偷看我啦">
+              <img class="site-author-image" itemprop="image" src="/images/奔跑吧你会更强大.jpg" alt="又来偷偷看我啦">
             
               <p class="site-author-name" itemprop="name">又来偷偷看我啦</p>
               <div class="site-description motion-element" itemprop="description"></div>
@@ -2251,7 +2246,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-count">19</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
