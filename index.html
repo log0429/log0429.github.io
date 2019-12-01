@@ -353,6 +353,757 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/30/PLC-编程注意事项/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello World">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/11/30/PLC-编程注意事项/" class="post-title-link" itemprop="url">PLC__编程注意事项</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-11-30 23:45:21" itemprop="dateCreated datePublished" datetime="2019-11-30T23:45:21+08:00">2019-11-30</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-12-01 15:53:58" itemprop="dateModified" datetime="2019-12-01T15:53:58+08:00">2019-12-01</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/PLC/" itemprop="url" rel="index"><span itemprop="name">PLC</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="每个LAD程序段都必须使用线圈或功能框指令来终止"><a href="#每个LAD程序段都必须使用线圈或功能框指令来终止" class="headerlink" title="每个LAD程序段都必须使用线圈或功能框指令来终止"></a>每个LAD程序段都必须使用线圈或功能框指令来终止</h2><h2 id="不能创建可能导致反向能流的分支"><a href="#不能创建可能导致反向能流的分支" class="headerlink" title="不能创建可能导致反向能流的分支"></a>不能创建可能导致反向能流的分支</h2><p><img src="/images/LAD_反向能流.jpg" alt><br>如上图所示出点A、B、C、D接通时，有一个假想的“概念电流”或“能流”（Power Flow）从左向右流动，这一方向与执行用户程序时的逻辑运算的顺序是一致的。<strong>能流只能从左向右流动。</strong><br>上图中可能有两个方向的能流流经触电F（经过触点A、B、F、H、G、D或经过触点E、F、C、D），这不符合能流只能从左向右流动的原则。</p>
+<h2 id="不能创建可能导致短路的分支"><a href="#不能创建可能导致短路的分支" class="headerlink" title="不能创建可能导致短路的分支"></a>不能创建可能导致短路的分支</h2><p><img src="/images/LAD_短路分支.jpg" alt></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/30/PLC-数据类型和数据存储/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello World">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/11/30/PLC-数据类型和数据存储/" class="post-title-link" itemprop="url">PLC_数据类型和数据存储</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-11-30 20:55:59" itemprop="dateCreated datePublished" datetime="2019-11-30T20:55:59+08:00">2019-11-30</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-12-01 20:52:16" itemprop="dateModified" datetime="2019-12-01T20:52:16+08:00">2019-12-01</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/PLC/" itemprop="url" rel="index"><span itemprop="name">PLC</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h2><p><strong>数据类型用于指定数据元素的大小以及如何解释数据。</strong><br>基本数据类型包括位、字节、字、双字、整型、双整型、浮点数、S5时间数据类型。<br>这里先列出我目前常用的数据类型，剩下的以后遇到再补充：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">数据类型</th>
+<th style="text-align:left">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">位和位序列数据类型</td>
+<td style="text-align:left">- Bool是布尔值或位值<br> - Byte是8位字节值，其中0位为最低位，7位为最高位<br> - Word是16位值<br> - DWord是32位双字值</td>
+</tr>
+<tr>
+<td style="text-align:left">整数数据类型</td>
+<td style="text-align:left">- USInt（无符号8位整数）和SInt（有符号8位整数）可以是有符号或无符号的“短”整型（内存为8位或1个字节）<br> - UInt（无符号16位整数）和Int（有符号16位整数）可以是有符号或无符号的整型（内存为16位或1个字）<br> - UDInt（无符号32位整数）和DInt（有符号32位整数）可以是有符号或无符号的双整型（内存为32位或1个双字）</td>
+</tr>
+</tbody>
+</table>
+<h2 id="数据存储"><a href="#数据存储" class="headerlink" title="数据存储"></a>数据存储</h2><p>为了更好地理解CPU的存储区结构及其寻址方式，以下段落将对PLC变量所引用的“绝对”寻址进行说明。CPU 提供了以下几个选项，用于在执行用户程序期间存储数据：</p>
+<ul>
+<li>全局存储器：CPU提供了各种专用存储区，其中包括输入(I)、输出(Q)和位存储器(M)。所有代码块可以无限制地访问该储存器。</li>
+<li>数据块 (DB)：可在用户程序中加入DB以存储代码块的数据。从相关代码块开始执行一直到结束，存储的数据始终存在。“全局”DB存储所有代码块均可使用的数据，而背景DB存储特定FB的数据并且由FB的参数进行构造。</li>
+<li>临时存储器：只要调用代码块，CPU的操作系统就会分配要在执行块期间使用的临时或本地存储器(L)。代码块执行完成后，CPU将重新分配本地存储器，以用于执行其它代码块。</li>
+</ul>
+<p>每个存储单元都有唯一的地址。用户程序利用这些地址访问存储单元中的信息。对输入(I)或输出(Q)存储区（例如 I0.3 或 Q1.7）的引用会访问过程映像。要立即访问物理输入或输出，请在引用后面添加“:P”（例如，I0.3:P、Q1.7:P或”Stop:P”）。<br>强制仅将固定值写入物理输入 (Ix.y:P) 或物理输出 (Qx.y:P)。要强制输入或输出，请在PLC变量或地址后面添加“:P”。 </p>
+<h2 id="对存储区进行寻址"><a href="#对存储区进行寻址" class="headerlink" title="对存储区进行寻址"></a>对存储区进行寻址</h2><p>每个存储单元都有唯一的地址。用户程序利用这些地址访问存储单元中的信息。绝对地址由以下元素组成：</p>
+<ul>
+<li>存储区（如 I、Q或M）</li>
+<li>要访问的数据的大小（如“B”表示Byte或“W”表示Word）</li>
+<li>数据地址（如Byte 3 或Word 3）</li>
+</ul>
+<p>访问布尔值地址中的位时，不要输入大小的助记符号。<br>仅需输入数据的存储区、字节位置和位位置（如0.0、Q0.1或M3.4）。</p>
+<h2 id="访问一个变量数据类型的“片段”"><a href="#访问一个变量数据类型的“片段”" class="headerlink" title="访问一个变量数据类型的“片段”"></a>访问一个变量数据类型的“片段”</h2><p>可以根据大小按位、字节、或字级别访问 PLC 变量和数据块变量。<br>访问此类数据片段的语法如下所示：</p>
+<ul>
+<li>“<plc 变量名称>“.xn（按位访问）</plc></li>
+<li>“<plc 变量名称>“.bn（按字节访问）</plc></li>
+<li>“<plc 变量名称>“.wn（按字访问）</plc></li>
+<li>“&lt;数据块名称&gt;”.&lt;变量名称&gt;.xn（按访问）</li>
+<li>“&lt;数据块名称&gt;”.&lt;变量名称&gt;.bn（按字节访问）</li>
+<li>“&lt;数据块名称&gt;”.&lt;变量名称&gt;.wn（按字访问）<br>双字大小的变量可按位 0 - 31、字节 0 - 3 或字 0 - 1 访问。一个字大小的的变量可按位 0 - 15、字节 0 - 1 或字 0 访问。字节大小的变量则可按位 0 - 7 或字节 0 访问。当预期操作数为位、字节或字时，则可使用位、字节和字片段访问方式。</li>
+</ul>
+<p><strong>示例</strong><br>在PLC变量表中， “DW”是一个声明为 DWORD 类型的变量。在以下示例中，显示了按位、字节和字片段的访问方式：<br><img src="/images/PLC_访问变量数据类型的“片段”.jpg" alt></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/30/PLC-基本概念/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello World">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/11/30/PLC-基本概念/" class="post-title-link" itemprop="url">PLC_基本概念</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-11-30 16:28:46" itemprop="dateCreated datePublished" datetime="2019-11-30T16:28:46+08:00">2019-11-30</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-12-01 16:11:58" itemprop="dateModified" datetime="2019-12-01T16:11:58+08:00">2019-12-01</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/PLC/" itemprop="url" rel="index"><span itemprop="name">PLC</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="基本概念"><a href="#基本概念" class="headerlink" title="基本概念"></a>基本概念</h2><ol>
+<li><p>PLC<br>可编程控制器（Programmable Logic Controller），简称PLC，是一种数字运算操作的电子系统。</p>
+</li>
+<li><p>组态<br>帮助文档的定义：组态是对自动化系统的组件进行选择和组合，以及安装所需软件和根据特定用途定制自动化系统。<br>通俗地来说，PLC组态是对硬件进行配置，简单的说就是告诉系统你配置了哪些东西，这样系统才能去连接你的东西。<br>在PLC项目中，通过向项目中添加CPU和其它模块为PLC创建设备组态。<strong>必须将模块添加到设备组态并将硬件配置下载到CPU中，模块才能正常工作。</strong></p>
+</li>
+<li><p>固件<br>固件是内嵌在电子设备中的软件。 固件通常保存在闪存（如 EPROM、EEPROM 或 ROM）中，并且只能由用户使用特殊工具或功能进行替换。 固件总是连接到硬件，二者相互依存，因此而得名。</p>
+</li>
+</ol>
+<h2 id="PLC的内部结构"><a href="#PLC的内部结构" class="headerlink" title="PLC的内部结构"></a>PLC的内部结构</h2><p>PLC的组成：<br><img src="/images/PLC内部结构图.jpg" alt></p>
+<h2 id="输入-输出映像"><a href="#输入-输出映像" class="headerlink" title="输入/输出映像"></a>输入/输出映像</h2><p>PLC输入映像寄存器和输出映像寄存器的作用，就是连接外部物理输入点和物理输出点的桥梁，每个扫描周期输入/输出映像寄存器都刷新一次。</p>
+<ol>
+<li><p>输入映像<br>开关量的输人接口属于物理输人，指的是外部输人给PLC的信号，例如传感器、按钮、位置开关等。在每一个扫描周期结束后，外部物理输人点的实际状态将映射到输入映像寄存器中。通俗点说，PLC不知道这些物理输人元件究竟是些什么东西，那么就需要引人输人映像来解决这个问题。<br>这个输人映像就好像是外部输人端子的影像。当外部有信号输人时，它相对应的输入映像寄存区域就为1；当外部信号没有信号输人时，它对应的输人映像寄存区域就为0，这样，PLC就可以直接通过扫描映像寄存区来了解外部端子的通断状态。</p>
+</li>
+<li><p>输出映像<br>开关量的输出接口和输人接口一样，也属于物理输出，指的是PLC输出给外部连接元件的信号，例如电磁阀、指示灯等。在每一个扫描周期结束后，将输出映像寄存器的状态映射到外部物理输出点。<br>和输人映像的情况-样，PLC中引人的输出映像和物理输出也是对应的关系，当相对应的输出映像是1时，这个输出映像所对应的输出端子就接通，而当相对应的输出映像是0时，这个输出映像所对应的输出端子就断开。</p>
+</li>
+</ol>
+<h2 id="PLC的扫描机制和扫描过程"><a href="#PLC的扫描机制和扫描过程" class="headerlink" title="PLC的扫描机制和扫描过程"></a>PLC的扫描机制和扫描过程</h2><p>PLC上电一运行，就由左往右、自上向下循环执行程序，并不停地刷新输入/输出映像区，如此循环不止，这就是PLC的扫描概念。扫描执行一次的周期称为扫描周期。<br><img src="/images/PLC扫描过程.jpg" alt></p>
+<h2 id="国际通用标准信号"><a href="#国际通用标准信号" class="headerlink" title="国际通用标准信号"></a>国际通用标准信号</h2><p>在电力电子技术和计算机技术快速发展的今天，常常需要将工程中检测的传感器信号进行远距离传送，但是纷繁复杂的物理量信号直接传送会大大降低仪表的适用性，而且大多传感器属于弱信号型，远距离传送很容易出现衰减、干扰的问题，这就是二次变送器和标准的电传送信号产生的推动力。<br>二次变送器的作用就是将传感器的信号放大成为符合工业传输标准的电信号，如0~5V、0~10V或4~20mA，其中用得最多的是4~20mA。而变送器通过对放大器电路的零点迁移以及增益调整，可以将标准信号准确地对应于物理量的被检测范围，如0~100°C或-10~100°C等，也就是用硬件电路对物理量进行数学变换。中央控制室的仪表将这些电信号驱动机械式的电压表、电流表，就能显示出被测的物理量。<br>在实际的工程项目中，对于不同的量程范围，只要更换指针后面的刻度盘就可以了。更换刻度盘不会影响仪表的根本性质，这就实现了仪表的标准化、通用性和规模化生产。<br>所谓标准信号，是指物理量的形式和数值范围都符合国际标准的信号值，信号是信息的载体，它表现了物理量的变化。国际通用标准信号是连接仪表、变送设备、控制设备、计算机采样设备的一一种标准信号。<br>这些标准信号包括:电流信号4~20mA、0~ 10mA和电压信号0~5V、0~10V等。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/30/QComboBox使用总结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello World">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/11/30/QComboBox使用总结/" class="post-title-link" itemprop="url">QComboBox使用总结</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-11-30 15:20:11 / 修改时间：15:43:42" itemprop="dateCreated datePublished" datetime="2019-11-30T15:20:11+08:00">2019-11-30</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/QT总结/" itemprop="url" rel="index"><span itemprop="name">QT总结</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>QComboBox控件可以在ui设计界面中拖入创建，也可以在代码中创建。</p>
+<h2 id="新建QComboBox控件"><a href="#新建QComboBox控件" class="headerlink" title="新建QComboBox控件"></a>新建QComboBox控件</h2><figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">QComboBox *comBox = new QComboBox()<span class="comment">;</span></span><br><span class="line">comBox-&gt;setGeometry(<span class="number">50</span>,<span class="number">50</span>,<span class="number">200</span>,<span class="number">30</span>)<span class="comment">;</span></span><br><span class="line">comBox-&gt;addItem(<span class="string">"item1"</span>)<span class="comment">;</span></span><br><span class="line">comBox-&gt;addItem(<span class="string">"item2"</span>)<span class="comment">;</span></span><br><span class="line">comBox-&gt;addItem(<span class="string">"item3"</span>)<span class="comment">;</span></span><br><span class="line">comBox-&gt;setCurrentIndex(<span class="number">0</span>)<span class="comment">;</span></span><br><span class="line"></span><br><span class="line">connect(<span class="name">comBox</span>,SIGNAL(<span class="name">currentIndexChanged</span>(<span class="name">int</span>)),this,SLOT(<span class="name">valueChanged</span>()))<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+<h2 id="调整下拉表框中item之间的间隔"><a href="#调整下拉表框中item之间的间隔" class="headerlink" title="调整下拉表框中item之间的间隔"></a>调整下拉表框中item之间的间隔</h2><p>有时下拉表框中item之间的间隔无法根据字体尺寸自动调整，会出现重叠，需要调整item之间的间隔：</p>
+<ol>
+<li><p>先在样式表中定义：</p>
+<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">comBox-&gt;setStyleSheet("QComboBox::drop-down&#123;border-style: none;&#125;"</span><br><span class="line">                      "QComboBox QAbstractItemView::item&#123;min-height:<span class="number">20px</span>;<span class="attribute">min-width</span>:<span class="number">20px</span>;&#125;");<span class="comment">//这一行就够了，设置最小宽度和高度</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在代码中写入：</p>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">QStyledItemDelegate* itemDelegate=new QStyledItemDelegate()<span class="comment">;</span></span><br><span class="line">comBox-&gt;setItemDelegate(<span class="name">itemDelegate</span>)<span class="comment">;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="获取当前显示的item"><a href="#获取当前显示的item" class="headerlink" title="获取当前显示的item"></a>获取当前显示的item</h2><figure class="highlight xl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">QS<span class="function"><span class="title">tring</span> str_currentText = comBox-&gt;</span>currentText();<span class="comment">//获取当前item的内容</span></span><br><span class="line"><span class="function"><span class="title">int</span> i_currentIndex = comBox-&gt;</span>currentIndex();<span class="comment">//获取当前item的序号，从0开始编号</span></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/29/QTableWidget使用总结/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -398,12 +1149,24 @@
                 
               
 
-              <time title="创建时间：2019-11-29 09:27:10 / 修改时间：23:32:20" itemprop="dateCreated datePublished" datetime="2019-11-29T09:27:10+08:00">2019-11-29</time>
+              <time title="创建时间：2019-11-29 09:27:10" itemprop="dateCreated datePublished" datetime="2019-11-29T09:27:10+08:00">2019-11-29</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-11-30 14:58:09" itemprop="dateModified" datetime="2019-11-30T14:58:09+08:00">2019-11-30</time>
               
             
           </span>
@@ -551,6 +1314,11 @@
 <blockquote>
 <p><em>Sets the given widget to be displayed in the cell in the given row and column, passing the ownership of the widget to the table.<br>If cell widget A is replaced with cell widget B, cell widget A will be deleted. For example, in the code snippet below, the QLineEdit object will be deleted.</em></p>
 </blockquote>
+<p><font color="red"><strong>注意：在单元格中加入控件之后，控件内容的改变，将不会触发tableWidget的<code>void on_tableWidget_cellChanged(int row, int column);</code>槽函数！</strong></font><br>可用函数<code>tableWidget-&gt;item(row,column)</code>查看tableWidget的单元格是否有内容：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">QTableWidgetItem * QTableWidget::item ( <span class="keyword">int</span> row, <span class="keyword">int</span> column ) <span class="keyword">const</span></span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p><em>Returns the item for the given row and column if one has been set; otherwise returns 0.</em></p>
+</blockquote>
+<p>在单元格加入控件后，调用<code>tableWidget-&gt;item(row,column)</code>查看对应单元格的内容，发现返回值为0。<strong>说明添加控件之后，产生的效果类似于该控件覆盖了原来的单元格，对该控件的操作不会影响到对应单元格的内容，也不会触发单元格的<code>cellChanged(int row, int column)</code>信号。</strong></p>
 
           
         
@@ -1435,646 +2203,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/27/hexo设置分类、标签、归档、时间线、关于/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hello World">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/11/27/hexo设置分类、标签、归档、时间线、关于/" class="post-title-link" itemprop="url">hexo设置分类、标签、归档、时间线、关于</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-11-27 15:16:11" itemprop="dateCreated datePublished" datetime="2019-11-27T15:16:11+08:00">2019-11-27</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-11-28 18:03:09" itemprop="dateModified" datetime="2019-11-28T18:03:09+08:00">2019-11-28</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/hexo使用教程/" itemprop="url" rel="index"><span itemprop="name">hexo使用教程</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>参考博客: <a href="jianshu.com/p/ebbbc8edcc24">jianshu.com/p/ebbbc8edcc24</a></p>
-<p><strong>以添加“分类”页面为例。</strong></p>
-<h2 id="添加-分类-页面"><a href="#添加-分类-页面" class="headerlink" title="添加 分类 页面"></a>添加 分类 页面</h2><p>使用    <code>hexo new page categories</code>新建一个 分类 页面，此命令会在source文件夹下初始化分类目录，并生成一个index文件。<br><img src="/images/categories目录.jpg" alt><br>在主题的_config.yml文件中的 menu 中进行设置<br>注：不同主题_config.yml文件有所区别<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">  home:</span> <span class="string">/</span>                  <span class="comment">#主页</span></span><br><span class="line"><span class="attr">  categories:</span> <span class="string">/categories</span>  <span class="comment">#分类  （添加此行即可）</span></span><br><span class="line"><span class="attr">  archives:</span> <span class="string">/archives</span>      <span class="comment">#归档</span></span><br><span class="line"><span class="attr">  tags:</span> <span class="string">/tags</span>              <span class="comment">#标签</span></span><br><span class="line"><span class="attr">  about:</span> <span class="string">/about</span>            <span class="comment">#关于                  </span></span><br><span class="line"><span class="string">或</span>    </span><br><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">  - page:</span> <span class="string">home</span></span><br><span class="line"><span class="attr">    directory:</span> <span class="string">.</span>            <span class="comment">#主页</span></span><br><span class="line"><span class="attr">    icon:</span> <span class="string">fa-home</span></span><br><span class="line"><span class="attr">  - page:</span> <span class="string">archive</span></span><br><span class="line"><span class="attr">    directory:</span> <span class="string">archives/</span>    <span class="comment">#归档</span></span><br><span class="line"><span class="attr">    icon:</span> <span class="string">fa-archive</span></span><br><span class="line"><span class="attr">  - page:</span> <span class="string">about</span></span><br><span class="line"><span class="attr">    directory:</span> <span class="string">about/</span>       <span class="comment">#关于</span></span><br><span class="line"><span class="attr">    icon:</span> <span class="string">fa-user</span></span><br><span class="line"><span class="attr">  - page:</span> <span class="string">rss</span></span><br><span class="line"><span class="attr">    directory:</span> <span class="string">atom.xml</span>     <span class="comment">#rss订阅</span></span><br><span class="line"><span class="attr">    icon:</span> <span class="string">fa-rss</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="修改文章模板"><a href="#修改文章模板" class="headerlink" title="修改文章模板"></a>修改文章模板</h2><p>文章的模版在scaffolds/post.md，内容修改如下：<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">&#123;&#123;</span> <span class="string">title</span> <span class="string">&#125;&#125;</span></span><br><span class="line"><span class="attr">date:</span> <span class="string">&#123;&#123;</span> <span class="string">date</span> <span class="string">&#125;&#125;</span></span><br><span class="line"><span class="attr">categories:</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/26/夏藏冬来见/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hello World">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/11/26/夏藏冬来见/" class="post-title-link" itemprop="url">夏藏冬来见</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-11-26 14:43:51 / 修改时间：14:46:58" itemprop="dateCreated datePublished" datetime="2019-11-26T14:43:51+08:00">2019-11-26</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>沉寂了整个夏天和秋天，想明白了一些事情，在杭州将要进入深冬的时候，我又回来了。</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/02/天线通信/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hello World">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/06/02/天线通信/" class="post-title-link" itemprop="url">天线通信</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-06-02 14:20:52" itemprop="dateCreated datePublished" datetime="2019-06-02T14:20:52+08:00">2019-06-02</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-11-28 17:54:43" itemprop="dateModified" datetime="2019-11-28T17:54:43+08:00">2019-11-28</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工程/" itemprop="url" rel="index"><span itemprop="name">工程</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>一、信号调制</p>
-<p>1.无线电通信是利用电磁波作为信息的载体</p>
-<p>2.调制信号特点是频率较低、频带较宽且相互重叠</p>
-<p>3.所谓调制就是将待传输的基带信号加载到高频振荡信号上的过程</p>
-<p>4.信号调制实质是将基带信号搬移到高频载波上去，也就是频谱搬移过程</p>
-<p>5.根据调制信号的不同，可以分为模拟信号调试和数字信号调制。而调制的基本原理是将调制信号加载到载波信号的3个参数之一中去。描述载波信号的3个关键参数是幅度、频率和相位。所以就有了AM、FM、PM和ASK、FSK和PSK。</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/23/江阴的迈巴赫/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hello World">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/23/江阴的迈巴赫/" class="post-title-link" itemprop="url">江阴的迈巴赫</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-23 22:22:27 / 修改时间：22:26:43" itemprop="dateCreated datePublished" datetime="2019-05-23T22:22:27+08:00">2019-05-23</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>少年多荒唐，心里的神坛总要供几个人，然后又把他们一个一个驱逐下去，终有一天，干脆把神坛砸烂，另筑一家园，只停留所爱的人，从此赴汤蹈火去过日子，只为“情深义重”这四个字。</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -2121,7 +2249,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -2144,7 +2272,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -2177,7 +2307,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

@@ -104,7 +104,7 @@
 <meta property="og:site_name" content="Hello World">
 <meta property="og:description" content="概述QTableWidget是QT程序中常用的显示数据表格的空间，类似于VC、C#中的DataGrid。QTableWidget是QTableView的子类，主要的区别是QTableView可以使用自定义的数据模型来显示内容(也就是先要通过setModel来绑定数据源)，而QTableWidget则只能使用标准的数据模型，并且其单元格数据是QTableWidgetItem的对象来实现的(也就是不需">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-29T15:32:20.264Z">
+<meta property="og:updated_time" content="2019-11-30T06:58:09.441Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="QTableWidget使用总结">
 <meta name="twitter:description" content="概述QTableWidget是QT程序中常用的显示数据表格的空间，类似于VC、C#中的DataGrid。QTableWidget是QTableView的子类，主要的区别是QTableView可以使用自定义的数据模型来显示内容(也就是先要通过setModel来绑定数据源)，而QTableWidget则只能使用标准的数据模型，并且其单元格数据是QTableWidgetItem的对象来实现的(也就是不需">
@@ -400,12 +400,24 @@
                 
               
 
-              <time title="创建时间：2019-11-29 09:27:10 / 修改时间：23:32:20" itemprop="dateCreated datePublished" datetime="2019-11-29T09:27:10+08:00">2019-11-29</time>
+              <time title="创建时间：2019-11-29 09:27:10" itemprop="dateCreated datePublished" datetime="2019-11-29T09:27:10+08:00">2019-11-29</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-11-30 14:58:09" itemprop="dateModified" datetime="2019-11-30T14:58:09+08:00">2019-11-30</time>
               
             
           </span>
@@ -551,6 +563,11 @@
 <blockquote>
 <p><em>Sets the given widget to be displayed in the cell in the given row and column, passing the ownership of the widget to the table.<br>If cell widget A is replaced with cell widget B, cell widget A will be deleted. For example, in the code snippet below, the QLineEdit object will be deleted.</em></p>
 </blockquote>
+<p><font color="red"><strong>注意：在单元格中加入控件之后，控件内容的改变，将不会触发tableWidget的<code>void on_tableWidget_cellChanged(int row, int column);</code>槽函数！</strong></font><br>可用函数<code>tableWidget-&gt;item(row,column)</code>查看tableWidget的单元格是否有内容：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">QTableWidgetItem * QTableWidget::item ( <span class="keyword">int</span> row, <span class="keyword">int</span> column ) <span class="keyword">const</span></span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p><em>Returns the item for the given row and column if one has been set; otherwise returns 0.</em></p>
+</blockquote>
+<p>在单元格加入控件后，调用<code>tableWidget-&gt;item(row,column)</code>查看对应单元格的内容，发现返回值为0。<strong>说明添加控件之后，产生的效果类似于该控件覆盖了原来的单元格，对该控件的操作不会影响到对应单元格的内容，也不会触发单元格的<code>cellChanged(int row, int column)</code>信号。</strong></p>
 
       
     </div>
@@ -596,6 +613,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/11/30/QComboBox使用总结/" rel="prev" title="QComboBox使用总结">
+                QComboBox使用总结 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -664,7 +685,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -687,7 +708,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -720,7 +743,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

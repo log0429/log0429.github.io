@@ -353,6 +353,646 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/27/hexo设置分类、标签、归档、时间线、关于/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello World">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/11/27/hexo设置分类、标签、归档、时间线、关于/" class="post-title-link" itemprop="url">hexo设置分类、标签、归档、时间线、关于</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-11-27 15:16:11" itemprop="dateCreated datePublished" datetime="2019-11-27T15:16:11+08:00">2019-11-27</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-11-28 18:03:09" itemprop="dateModified" datetime="2019-11-28T18:03:09+08:00">2019-11-28</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/hexo使用教程/" itemprop="url" rel="index"><span itemprop="name">hexo使用教程</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>参考博客: <a href="jianshu.com/p/ebbbc8edcc24">jianshu.com/p/ebbbc8edcc24</a></p>
+<p><strong>以添加“分类”页面为例。</strong></p>
+<h2 id="添加-分类-页面"><a href="#添加-分类-页面" class="headerlink" title="添加 分类 页面"></a>添加 分类 页面</h2><p>使用    <code>hexo new page categories</code>新建一个 分类 页面，此命令会在source文件夹下初始化分类目录，并生成一个index文件。<br><img src="/images/categories目录.jpg" alt><br>在主题的_config.yml文件中的 menu 中进行设置<br>注：不同主题_config.yml文件有所区别<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">  home:</span> <span class="string">/</span>                  <span class="comment">#主页</span></span><br><span class="line"><span class="attr">  categories:</span> <span class="string">/categories</span>  <span class="comment">#分类  （添加此行即可）</span></span><br><span class="line"><span class="attr">  archives:</span> <span class="string">/archives</span>      <span class="comment">#归档</span></span><br><span class="line"><span class="attr">  tags:</span> <span class="string">/tags</span>              <span class="comment">#标签</span></span><br><span class="line"><span class="attr">  about:</span> <span class="string">/about</span>            <span class="comment">#关于                  </span></span><br><span class="line"><span class="string">或</span>    </span><br><span class="line"><span class="attr">menu:</span></span><br><span class="line"><span class="attr">  - page:</span> <span class="string">home</span></span><br><span class="line"><span class="attr">    directory:</span> <span class="string">.</span>            <span class="comment">#主页</span></span><br><span class="line"><span class="attr">    icon:</span> <span class="string">fa-home</span></span><br><span class="line"><span class="attr">  - page:</span> <span class="string">archive</span></span><br><span class="line"><span class="attr">    directory:</span> <span class="string">archives/</span>    <span class="comment">#归档</span></span><br><span class="line"><span class="attr">    icon:</span> <span class="string">fa-archive</span></span><br><span class="line"><span class="attr">  - page:</span> <span class="string">about</span></span><br><span class="line"><span class="attr">    directory:</span> <span class="string">about/</span>       <span class="comment">#关于</span></span><br><span class="line"><span class="attr">    icon:</span> <span class="string">fa-user</span></span><br><span class="line"><span class="attr">  - page:</span> <span class="string">rss</span></span><br><span class="line"><span class="attr">    directory:</span> <span class="string">atom.xml</span>     <span class="comment">#rss订阅</span></span><br><span class="line"><span class="attr">    icon:</span> <span class="string">fa-rss</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="修改文章模板"><a href="#修改文章模板" class="headerlink" title="修改文章模板"></a>修改文章模板</h2><p>文章的模版在scaffolds/post.md，内容修改如下：<br><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">title:</span> <span class="string">&#123;&#123;</span> <span class="string">title</span> <span class="string">&#125;&#125;</span></span><br><span class="line"><span class="attr">date:</span> <span class="string">&#123;&#123;</span> <span class="string">date</span> <span class="string">&#125;&#125;</span></span><br><span class="line"><span class="attr">categories:</span></span><br><span class="line"><span class="attr">tags:</span></span><br><span class="line"><span class="meta">---</span></span><br></pre></td></tr></table></figure></p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/26/夏藏冬来见/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello World">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/11/26/夏藏冬来见/" class="post-title-link" itemprop="url">夏藏冬来见</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-11-26 14:43:51 / 修改时间：14:46:58" itemprop="dateCreated datePublished" datetime="2019-11-26T14:43:51+08:00">2019-11-26</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>沉寂了整个夏天和秋天，想明白了一些事情，在杭州将要进入深冬的时候，我又回来了。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/02/天线通信/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello World">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/06/02/天线通信/" class="post-title-link" itemprop="url">天线通信</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-06-02 14:20:52" itemprop="dateCreated datePublished" datetime="2019-06-02T14:20:52+08:00">2019-06-02</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-11-28 17:54:43" itemprop="dateModified" datetime="2019-11-28T17:54:43+08:00">2019-11-28</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/工程/" itemprop="url" rel="index"><span itemprop="name">工程</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>一、信号调制</p>
+<p>1.无线电通信是利用电磁波作为信息的载体</p>
+<p>2.调制信号特点是频率较低、频带较宽且相互重叠</p>
+<p>3.所谓调制就是将待传输的基带信号加载到高频振荡信号上的过程</p>
+<p>4.信号调制实质是将基带信号搬移到高频载波上去，也就是频谱搬移过程</p>
+<p>5.根据调制信号的不同，可以分为模拟信号调试和数字信号调制。而调制的基本原理是将调制信号加载到载波信号的3个参数之一中去。描述载波信号的3个关键参数是幅度、频率和相位。所以就有了AM、FM、PM和ASK、FSK和PSK。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/23/江阴的迈巴赫/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello World">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2019/05/23/江阴的迈巴赫/" class="post-title-link" itemprop="url">江阴的迈巴赫</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-23 22:22:27 / 修改时间：22:26:43" itemprop="dateCreated datePublished" datetime="2019-05-23T22:22:27+08:00">2019-05-23</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>少年多荒唐，心里的神坛总要供几个人，然后又把他们一个一个驱逐下去，终有一天，干脆把神坛砸烂，另筑一家园，只停留所爱的人，从此赴汤蹈火去过日子，只为“情深义重”这四个字。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/22/MATLAB读取-csv数据绘图/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1050,7 +1690,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">14</span>
+                    <span class="site-state-item-count">18</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1073,7 +1713,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -1106,7 +1748,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">8</span>
+                      
+                    
+                    <span class="site-state-item-count">9</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
