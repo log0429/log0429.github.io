@@ -1,101 +1,12 @@
 <!DOCTYPE html>
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-<html class="theme-next muse use-motion" lang="zh-CN">
+<html>
 <head><meta name="generator" content="Hexo 3.8.0">
-  <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
-
-<link rel="stylesheet" href="/css/main.css?v=7.1.1">
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.1">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.1">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=7.1.1" color="#222">
-
-
-
-
-
-
-
-<script id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '7.1.1',
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
-    back2top: true,
-    back2top_sidebar: false,
-    fancybox: false,
-    fastclick: false,
-    lazyload: false,
-    tabs: true,
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
+  <meta charset="utf-8">
   
 
-
-
-
+  
+  <title>滤波学习笔记00-前言及环境搭建 | Hello World</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="本系列学习笔记基于GitHub上的一个教程——Kalman-and-Bayesian-Filters-in-Python，感谢作者，感谢开源！ 前言学习教程来自GitHub，https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python，这是一本介绍卡尔曼滤波和贝叶斯滤波的教程，教程中所有的代码使用Python编写。这本教程是用Jup">
 <meta name="keywords" content="滤波,Python">
 <meta property="og:type" content="article">
@@ -104,377 +15,93 @@
 <meta property="og:site_name" content="Hello World">
 <meta property="og:description" content="本系列学习笔记基于GitHub上的一个教程——Kalman-and-Bayesian-Filters-in-Python，感谢作者，感谢开源！ 前言学习教程来自GitHub，https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python，这是一本介绍卡尔曼滤波和贝叶斯滤波的教程，教程中所有的代码使用Python编写。这本教程是用Jup">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-14T12:40:55.748Z">
+<meta property="og:image" content="http://yoursite.com/images/Anaconda安装_环境变量.png">
+<meta property="og:image" content="http://yoursite.com/images/Anaconda安装_激活Python.png">
+<meta property="og:image" content="http://yoursite.com/images/Anaconda安装_检查Python报错.png">
+<meta property="og:image" content="http://yoursite.com/images/Anaconda安装_conda_activate.png">
+<meta property="og:image" content="http://yoursite.com/images/Anaconda安装_检查conda.png">
+<meta property="og:updated_time" content="2019-12-16T14:00:17.477Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="滤波学习笔记00-前言及环境搭建">
 <meta name="twitter:description" content="本系列学习笔记基于GitHub上的一个教程——Kalman-and-Bayesian-Filters-in-Python，感谢作者，感谢开源！ 前言学习教程来自GitHub，https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python，这是一本介绍卡尔曼滤波和贝叶斯滤波的教程，教程中所有的代码使用Python编写。这本教程是用Jup">
-
-
-
-
-
+<meta name="twitter:image" content="http://yoursite.com/images/Anaconda安装_环境变量.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hello World" type="application/atom+xml">
   
   
-  <link rel="canonical" href="http://yoursite.com/2019/12/09/滤波学习笔记00-前言及环境搭建/">
-
-
-
-<script id="page.configurations">
-  CONFIG.page = {
-    sidebar: "",
-  };
-</script>
-
-  <title>滤波学习笔记00-前言及环境搭建 | Hello World</title>
+    <link rel="icon" href="/favicon.png">
   
-
-
-
-
-
-
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .motion-element,
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-title { opacity: initial; }
-
-  .use-motion .logo,
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
 </head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left page-post-detail">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hello World</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hello World</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">一切开始的时候，是最美好的时光。</a>
+        </h2>
+      
     </div>
-    
-      
-        <p class="site-subtitle">一切开始的时候，是最美好的时光。</p>
-      
-    
-    
-  </div>
-
-  <div class="site-nav-toggle">
-    <button aria-label="切换导航栏">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
-
-
-
-<nav class="site-nav">
-  
-    <ul id="menu" class="menu">
-      
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
         
+          <a class="main-nav-link" href="/">Home</a>
         
+          <a class="main-nav-link" href="/archives/">Archives</a>
         
-          
-          <li class="menu-item menu-item-home">
-
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
-
-  </li>
+          <a class="main-nav-link" href="/categories/">categories</a>
         
+      </nav>
+      <nav id="sub-nav">
         
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-          
-          <li class="menu-item menu-item-categories">
-
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-tags">
-
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
-
-  </li>
-        
-        
-        
-          
-          <li class="menu-item menu-item-archives">
-
-    
-    
-    
-      
-    
-
-    
-
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
-
-  </li>
-
-      
-      
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
-        </li>
-      
-    </ul>
-  
-
-  
-    
-
-  
-
-  
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
     </div>
   </div>
-  <div id="local-search-result"></div>
-</div>
-
-
-
-    </div>
-  
-</nav>
-
-
-
-  
-
-
-
-</div>
-    </header>
-
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-滤波学习笔记00-前言及环境搭建" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/12/09/滤波学习笔记00-前言及环境搭建/" class="article-date">
+  <time datetime="2019-12-09T09:24:13.000Z" itemprop="datePublished">2019-12-09</time>
+</a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Kalman-and-Bayesian-Filters-in-Python学习/">Kalman-and-Bayesian-Filters-in-Python学习</a>
+  </div>
 
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          
-          <div id="content" class="content">
-            
-
-  <div id="posts" class="posts-expand">
+  </div>
+  <div class="article-inner">
     
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/12/09/滤波学习笔记00-前言及环境搭建/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="又来偷偷看我啦">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/奔跑吧你会更强大.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hello World">
-    </span>
-
     
-      <header class="post-header">
-
+      <header class="article-header">
         
-        
-          <h1 class="post-title" itemprop="name headline">滤波学习笔记00-前言及环境搭建
+  
+    <h1 class="article-title" itemprop="name">
+      滤波学习笔记00-前言及环境搭建
+    </h1>
+  
 
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-12-09 17:24:13" itemprop="dateCreated datePublished" datetime="2019-12-09T17:24:13+08:00">2019-12-09</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">更新于</span>
-                
-                <time title="修改时间：2019-12-14 20:40:55" itemprop="dateModified" datetime="2019-12-14T20:40:55+08:00">2019-12-14</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Kalman-and-Bayesian-Filters-in-Python学习/" itemprop="url" rel="index"><span itemprop="name">Kalman-and-Bayesian-Filters-in-Python学习</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-            <span class="post-meta-divider">|</span>
-            <span class="post-meta-item-icon">
-            <i class="fa fa-eye"></i>
-             阅读次数： 
-            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
-            </span>
-          
-
-          
-
-          
-
-        </div>
       </header>
     
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
+    <div class="article-entry" itemprop="articleBody">
       
         <p><strong>本系列学习笔记基于GitHub上的一个教程——Kalman-and-Bayesian-Filters-in-Python，感谢作者，感谢开源！</strong></p>
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>学习教程来自GitHub，<code>https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python</code>，这是一本介绍卡尔曼滤波和贝叶斯滤波的教程，教程中所有的代码使用Python编写。这本教程是用Juptyer Notebook编写的，所以我们可以在浏览器上直接修改并运行书中的代码，实现作者所期望的<strong>交互式学习</strong>。<br>关于作者自己写的前言、教程介绍、写作缘起之类的，可以在该项目的<code>README</code>文件中细品。我在这里主要记录如何配置环境实现作者期望的交互式学习。</p>
@@ -484,7 +111,8 @@
 <li><p>交互式阅读<br>作者极力推荐这种学习方式，这也是这本教程的设计意图。<br>为了实现交互式阅读，需要先进行一番配置，安装一些支持包。同样，作者在<code>README</code>文件中也给出了安装说明，下面将记录详细过程。</p>
 </li>
 </ol>
-<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><p>1.安装Anaconda<br><strong>实现这本教程的交互式阅读需要Jupyter notebook, IPython, Jupyter, NumPy, SciPy, SymPy, Matplotlib等软件和支持包，所有的这些都可以通过安装Anaconda来一次性完成安装。</strong></p>
+<h2 id="环境搭建"><a href="#环境搭建" class="headerlink" title="环境搭建"></a>环境搭建</h2><ol>
+<li><p>安装Anaconda(第一次安装选择了清华镜像网站下载的版本，有问题后重新安装了官网的)<br><strong>实现这本教程的交互式阅读需要Jupyter notebook, IPython, Jupyter, NumPy, SciPy, SymPy, Matplotlib等软件和支持包，所有的这些都可以通过安装Anaconda来一次性完成安装。</strong></p>
 <p>Anaconda指的是一个<strong>开源的Python发行版本</strong>，其包含了conda、Python等180多个科学包及其依赖项。 因为包含了大量的科学包，Anaconda 的下载文件比较大（约 531 MB），如果只需要某些包，或者需要节省带宽或存储空间，也可以使用Miniconda这个较小的发行版（仅包含conda和 Python）。<br>Conda是一个开源的包、环境管理器，可以用于在同一个机器上安装不同版本的软件包及其依赖，并能够在不同的环境之间切换。</p>
 <p>可以从Anaconda官网下载Anaconda，<a href="https://www.anaconda.com/distribution/#download-section" target="_blank" rel="noopener">https://www.anaconda.com/distribution/#download-section</a>。</p>
 <p>但官方下载很慢，推荐从清华镜像网站下载：<br><a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/" target="_blank" rel="noopener">https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/</a>。</p>
@@ -493,781 +121,176 @@
 <blockquote>
 <p>Jupyter notebook is the software that allows you to run Python inside of the browser - the book is a collection of Jupyter notebooks. IPython provides the infrastructure for Jupyter and data visualization. NumPy and Scipy are packages which provide the linear algebra implementation that the filters use. Sympy performs symbolic math - I use it to find derivatives of algebraic equations. Finally, Matplotlib provides plotting capability.</p>
 </blockquote>
-<p>2.安装FilterPy<br>FilterPy是教程作者写的一个库，使用<code>pip</code>进行安装。<br>pip是Python包管理工具，该工具提供了对Python包的查找、下载、安装、卸载的功能。Python 2.7.9 + 或 Python 3.4+ 以上版本都自带pip工具。</p>
+</li>
+<li><p>安装FilterPy<br>FilterPy是教程作者写的一个库，使用<code>pip</code>进行安装。<br>pip是Python包管理工具，该工具提供了对Python包的查找、下载、安装、卸载的功能。Python 2.7.9 + 或 Python 3.4+ 以上版本都自带pip工具。</p>
 <blockquote>
 <p>FilterPy is a Python library that implements all of the filters used in this book, and quite a few others. Installation is easy using pip. Issue the following from the command prompt:<br><code>pip install filterpy</code></p>
 </blockquote>
+</li>
+</ol>
 <h2 id="下载和运行教材"><a href="#下载和运行教材" class="headerlink" title="下载和运行教材"></a>下载和运行教材</h2><p>教材放在一个github repository中，使用如下命令下载：<br><code>git clone --depth=1 https://github.com/rlabbe/Kalman-and-Bayesian-Filters-in-Python.git</code><br>这个命令会创建出一个名为<code>Kalman-and-Bayesian-Filters-in-Python</code>的文件夹，定位到这个文件夹下，运行Jupyter notebook：<br><figure class="highlight xl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd Kalman-<span class="built_in">and</span>-Bayesian-<span class="built_in">Filters</span>-<span class="built_in">in</span>-Python</span><br><span class="line">jupyter notebook</span><br></pre></td></tr></table></figure></p>
 <p>它将会打开一个浏览器窗口，显示根目录的内容。这本书分成许多章，每个章节都命名为xx-name.ipynb，其中xx是章节号，.ipynb是Notebook文件的扩展名。</p>
-<h2 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h2><p>运行Jupyter notebook时报错：<br><figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File "C:<span class="symbol">\P</span>rogramData<span class="symbol">\A</span>naconda3<span class="symbol">\S</span>cripts<span class="symbol">\j</span>upyter-notebook-script.py", line 6, in &lt;module&gt;</span><br><span class="line">    from notebook.notebookapp import main</span><br><span class="line">  File "C:<span class="symbol">\P</span>rogramData<span class="symbol">\A</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages<span class="symbol">\n</span>otebook<span class="symbol">\n</span>otebookapp.py", line 47, in &lt;module&gt;</span><br><span class="line">    from zmq.eventloop import ioloop</span><br><span class="line">  File "C:<span class="symbol">\P</span>rogramData<span class="symbol">\A</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages<span class="symbol">\z</span>mq<span class="symbol">\_</span>_init__.py", line 47, in &lt;module&gt;</span><br><span class="line">    from zmq import backend</span><br><span class="line">  File "C:<span class="symbol">\P</span>rogramData<span class="symbol">\A</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages<span class="symbol">\z</span>mq<span class="symbol">\b</span>ackend<span class="symbol">\_</span>_init__.py", line 40, in &lt;module&gt;</span><br><span class="line">    reraise(*exc_info)</span><br><span class="line">  File "C:<span class="symbol">\P</span>rogramData<span class="symbol">\A</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages<span class="symbol">\z</span>mq<span class="symbol">\u</span>tils<span class="symbol">\s</span>ixcerpt.py", line 34, in reraise</span><br><span class="line">    raise value</span><br><span class="line">  File "C:<span class="symbol">\P</span>rogramData<span class="symbol">\A</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages<span class="symbol">\z</span>mq<span class="symbol">\b</span>ackend<span class="symbol">\_</span>_init__.py", line 27, in &lt;module&gt;</span><br><span class="line">    _ns = select_backend(first)</span><br><span class="line">  File "C:<span class="symbol">\P</span>rogramData<span class="symbol">\A</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages<span class="symbol">\z</span>mq<span class="symbol">\b</span>ackend<span class="symbol">\s</span>elect.py", line 27, in select_backend</span><br><span class="line">    mod = __import__(name, fromlist=public_api)</span><br><span class="line">  File "C:<span class="symbol">\P</span>rogramData<span class="symbol">\A</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages<span class="symbol">\z</span>mq<span class="symbol">\b</span>ackend<span class="symbol">\c</span>ython<span class="symbol">\_</span>_init__.py", line 6, in &lt;module&gt;</span><br><span class="line">    from . import (constants, error, message, context,</span><br><span class="line">ImportError: DLL load failed: 找不到指定的模块。</span><br></pre></td></tr></table></figure></p>
+<h2 id="遇到的问题-这一部分可以不用看了，我不打算解决这些问题，我选择重新安装"><a href="#遇到的问题-这一部分可以不用看了，我不打算解决这些问题，我选择重新安装" class="headerlink" title="遇到的问题(这一部分可以不用看了，我不打算解决这些问题，我选择重新安装)"></a>遇到的问题(这一部分可以不用看了，我不打算解决这些问题，我选择重新安装)</h2><ol>
+<li>运行Jupyter notebook时报错：</li>
+</ol>
+<figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File "C:<span class="symbol">\P</span>rogramData<span class="symbol">\A</span>naconda3<span class="symbol">\S</span>cripts<span class="symbol">\j</span>upyter-notebook-script.py", line 6, in &lt;module&gt;</span><br><span class="line">    from notebook.notebookapp import main</span><br><span class="line">  File "C:<span class="symbol">\P</span>rogramData<span class="symbol">\A</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages<span class="symbol">\n</span>otebook<span class="symbol">\n</span>otebookapp.py", line 47, in &lt;module&gt;</span><br><span class="line">    from zmq.eventloop import ioloop</span><br><span class="line">  File "C:<span class="symbol">\P</span>rogramData<span class="symbol">\A</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages<span class="symbol">\z</span>mq<span class="symbol">\_</span>_init__.py", line 47, in &lt;module&gt;</span><br><span class="line">    from zmq import backend</span><br><span class="line">  File "C:<span class="symbol">\P</span>rogramData<span class="symbol">\A</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages<span class="symbol">\z</span>mq<span class="symbol">\b</span>ackend<span class="symbol">\_</span>_init__.py", line 40, in &lt;module&gt;</span><br><span class="line">    reraise(*exc_info)</span><br><span class="line">  File "C:<span class="symbol">\P</span>rogramData<span class="symbol">\A</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages<span class="symbol">\z</span>mq<span class="symbol">\u</span>tils<span class="symbol">\s</span>ixcerpt.py", line 34, in reraise</span><br><span class="line">    raise value</span><br><span class="line">  File "C:<span class="symbol">\P</span>rogramData<span class="symbol">\A</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages<span class="symbol">\z</span>mq<span class="symbol">\b</span>ackend<span class="symbol">\_</span>_init__.py", line 27, in &lt;module&gt;</span><br><span class="line">    _ns = select_backend(first)</span><br><span class="line">  File "C:<span class="symbol">\P</span>rogramData<span class="symbol">\A</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages<span class="symbol">\z</span>mq<span class="symbol">\b</span>ackend<span class="symbol">\s</span>elect.py", line 27, in select_backend</span><br><span class="line">    mod = __import__(name, fromlist=public_api)</span><br><span class="line">  File "C:<span class="symbol">\P</span>rogramData<span class="symbol">\A</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages<span class="symbol">\z</span>mq<span class="symbol">\b</span>ackend<span class="symbol">\c</span>ython<span class="symbol">\_</span>_init__.py", line 6, in &lt;module&gt;</span><br><span class="line">    from . import (constants, error, message, context,</span><br><span class="line">ImportError: DLL load failed: 找不到指定的模块。</span><br></pre></td></tr></table></figure>
 <p>解决方法：重装pyzmq<br><code>pip uninstall pyzmq</code></p>
 <p><code>pip install pyzmq</code></p>
-<p>如果使用命令行无法卸载，则手动卸载。直接全局搜索对应文件，具体包括 “package name” 文件夹 和 “package name”.egg-info ，找到后直接删除即可。<br>在这个问题中，找到<code>pyzmq-17.1.2-py3.7.egg-info</code>文件夹和<code>zmq</code>文件夹，手动删除，然后运行<code>pip install pyzmq</code>命令重新安装。</p>
+<p>如果使用命令行无法卸载，则手动卸载。<br><figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">Exception:</span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File "C:<span class="symbol">\P</span>rogramData<span class="symbol">\A</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>hutil.py", line 557, in move</span><br><span class="line">    os.rename(src, real_dst)</span><br><span class="line">PermissionError: [WinError 5] 拒绝访问。: 'c:<span class="symbol">\\</span>programdata<span class="symbol">\\</span>anaconda3<span class="symbol">\\</span>lib<span class="symbol">\\</span>site-packages<span class="symbol">\\</span>__pycache__<span class="symbol">\\</span>pylab.cpython-37.pyc' -&gt; 'C:<span class="symbol">\\</span>Users<span class="symbol">\\</span>LUO<span class="symbol">\\</span>AppData<span class="symbol">\\</span>Local<span class="symbol">\\</span>Temp<span class="symbol">\\</span>pip-uninstall-shz5whnk<span class="symbol">\\</span>programdata<span class="symbol">\\</span>anaconda3<span class="symbol">\\</span>lib<span class="symbol">\\</span>site-packages<span class="symbol">\\</span>__pycache__<span class="symbol">\\</span>pylab.cpython-37.pyc'</span><br><span class="line"></span><br><span class="line">During handling of the above exception, another exception occurred:</span><br><span class="line"></span><br><span class="line">Traceback (most recent call last):</span><br><span class="line">  File "C:<span class="symbol">\P</span>rogramData<span class="symbol">\A</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages<span class="symbol">\p</span>ip<span class="symbol">\_</span>internal<span class="symbol">\b</span>asecommand.py", line 228, in main</span><br><span class="line">    status = self.run(options, args)</span><br><span class="line">  File "C:<span class="symbol">\P</span>rogramData<span class="symbol">\A</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages<span class="symbol">\p</span>ip<span class="symbol">\_</span>internal<span class="symbol">\c</span>ommands<span class="symbol">\u</span>ninstall.py", line 68, in run</span><br><span class="line">    auto_confirm=options.yes, verbose=self.verbosity &gt; 0,</span><br><span class="line">  File "C:<span class="symbol">\P</span>rogramData<span class="symbol">\A</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages<span class="symbol">\p</span>ip<span class="symbol">\_</span>internal<span class="symbol">\r</span>eq<span class="symbol">\r</span>eq_install.py", line 661, in uninstall</span><br><span class="line">    uninstalled_pathset.remove(auto_confirm, verbose)</span><br><span class="line">  File "C:<span class="symbol">\P</span>rogramData<span class="symbol">\A</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages<span class="symbol">\p</span>ip<span class="symbol">\_</span>internal<span class="symbol">\r</span>eq<span class="symbol">\r</span>eq_uninstall.py", line 219, in remove</span><br><span class="line">    renames(path, new_path)</span><br><span class="line">  File "C:<span class="symbol">\P</span>rogramData<span class="symbol">\A</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>ite-packages<span class="symbol">\p</span>ip<span class="symbol">\_</span>internal<span class="symbol">\u</span>tils<span class="symbol">\m</span>isc.py", line 273, in renames</span><br><span class="line">    shutil.move(old, new)</span><br><span class="line">  File "C:<span class="symbol">\P</span>rogramData<span class="symbol">\A</span>naconda3<span class="symbol">\l</span>ib<span class="symbol">\s</span>hutil.py", line 572, in move</span><br><span class="line">    os.unlink(src)</span><br><span class="line">PermissionError: [WinError 5] 拒绝访问。: 'c:<span class="symbol">\\</span>programdata<span class="symbol">\\</span>anaconda3<span class="symbol">\\</span>lib<span class="symbol">\\</span>site-packages<span class="symbol">\\</span>__pycache__<span class="symbol">\\</span>pylab.cpython-37.pyc'</span><br></pre></td></tr></table></figure></p>
+<p>直接全局搜索对应文件，具体包括 “package name” 文件夹 和 “package name”.egg-info ，找到后直接删除即可。<br>在这个问题中，找到<code>pyzmq-17.1.2-py3.7.egg-info</code>文件夹和<code>zmq</code>文件夹，手动删除，然后运行<code>pip install pyzmq</code>命令重新安装。</p>
+<ol start="2">
+<li>运行教程中的代码时报错</li>
+</ol>
+<figure class="highlight crystal"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line">ImportError                               Traceback (most recent call last)</span><br><span class="line"><span class="symbol">C:</span>\ProgramData\Anaconda3\<span class="class"><span class="keyword">lib</span>\<span class="title">site</span>-<span class="title">packages</span>\<span class="title">numpy</span>\<span class="title">core</span>\<span class="title">__init__</span>.<span class="title">py</span> <span class="title">in</span> &lt;<span class="title">module</span>&gt;()</span></span><br><span class="line">     <span class="number">15</span> <span class="symbol">try:</span></span><br><span class="line">---&gt; <span class="number">16</span>     from . import multiarray</span><br><span class="line">     <span class="number">17</span> except ImportError <span class="keyword">as</span> <span class="symbol">exc:</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">ImportError:</span> DLL load <span class="symbol">failed:</span> 找不到指定的模块。</span><br><span class="line"></span><br><span class="line">During handling <span class="keyword">of</span> the above exception, another exception <span class="symbol">occurred:</span></span><br><span class="line"></span><br><span class="line">ImportError                               Traceback (most recent call last)</span><br><span class="line">&lt;ipython-input-<span class="number">7</span>-<span class="number">44</span>ce08f6fafe&gt; in &lt;<span class="class"><span class="keyword">module</span>&gt;()</span></span><br><span class="line">      <span class="number">1</span> <span class="comment">#format the book</span></span><br><span class="line">----&gt; <span class="number">2</span> import book_format</span><br><span class="line">      <span class="number">3</span> book_format.set_style()</span><br><span class="line"></span><br><span class="line"><span class="symbol">C:</span>\Kalman-and-Bayesian-Filters-in-Python\book_format.py in &lt;<span class="class"><span class="keyword">module</span>&gt;()</span></span><br><span class="line">     <span class="number">20</span> from IPython.core.display import HTML</span><br><span class="line">     <span class="number">21</span> import json</span><br><span class="line">---&gt; <span class="number">22</span> import matplotlib</span><br><span class="line">     <span class="number">23</span> import matplotlib.pylab <span class="keyword">as</span> pylab</span><br><span class="line">     <span class="number">24</span> import matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"><span class="symbol">C:</span>\ProgramData\Anaconda3\<span class="class"><span class="keyword">lib</span>\<span class="title">site</span>-<span class="title">packages</span>\<span class="title">matplotlib</span>\<span class="title">__init__</span>.<span class="title">py</span> <span class="title">in</span> &lt;<span class="title">module</span>&gt;()</span></span><br><span class="line">    <span class="number">124</span> <span class="comment"># cbook must import matplotlib only within function</span></span><br><span class="line">    <span class="number">125</span> <span class="comment"># definitions, so it is safe to import from it here.</span></span><br><span class="line">--&gt; <span class="number">126</span> from . import cbook</span><br><span class="line">    <span class="number">127</span> from matplotlib.cbook import (</span><br><span class="line">    <span class="number">128</span>     _backports, mplDeprecation, dedent, get_label, sanitize_sequence)</span><br><span class="line"></span><br><span class="line"><span class="symbol">C:</span>\ProgramData\Anaconda3\<span class="class"><span class="keyword">lib</span>\<span class="title">site</span>-<span class="title">packages</span>\<span class="title">matplotlib</span>\<span class="title">cbook</span>\<span class="title">__init__</span>.<span class="title">py</span> <span class="title">in</span> &lt;<span class="title">module</span>&gt;()</span></span><br><span class="line">     <span class="number">32</span> from weakref import ref, WeakKeyDictionary</span><br><span class="line">     <span class="number">33</span> </span><br><span class="line">---&gt; <span class="number">34</span> import numpy <span class="keyword">as</span> np</span><br><span class="line">     <span class="number">35</span> </span><br><span class="line">     <span class="number">36</span> import matplotlib</span><br><span class="line"></span><br><span class="line"><span class="symbol">C:</span>\ProgramData\Anaconda3\<span class="class"><span class="keyword">lib</span>\<span class="title">site</span>-<span class="title">packages</span>\<span class="title">numpy</span>\<span class="title">__init__</span>.<span class="title">py</span> <span class="title">in</span> &lt;<span class="title">module</span>&gt;()</span></span><br><span class="line">    <span class="number">140</span>         <span class="keyword">return</span> loader(*packages, **options)</span><br><span class="line">    <span class="number">141</span> </span><br><span class="line">--&gt; <span class="number">142</span>     from . import add_newdocs</span><br><span class="line">    <span class="number">143</span>     __all__ = [<span class="string">'add_newdocs'</span>,</span><br><span class="line">    <span class="number">144</span>                <span class="string">'ModuleDeprecationWarning'</span>,</span><br><span class="line"></span><br><span class="line"><span class="symbol">C:</span>\ProgramData\Anaconda3\<span class="class"><span class="keyword">lib</span>\<span class="title">site</span>-<span class="title">packages</span>\<span class="title">numpy</span>\<span class="title">add_newdocs</span>.<span class="title">py</span> <span class="title">in</span> &lt;<span class="title">module</span>&gt;()</span></span><br><span class="line">     <span class="number">11</span> from __future__ import division, absolute_import, print_function</span><br><span class="line">     <span class="number">12</span> </span><br><span class="line">---&gt; <span class="number">13</span> from numpy.<span class="keyword">lib</span> import add_newdoc</span><br><span class="line">     <span class="number">14</span> </span><br><span class="line">     <span class="number">15</span> <span class="comment">###############################################################################</span></span><br><span class="line"></span><br><span class="line"><span class="symbol">C:</span>\ProgramData\Anaconda3\<span class="class"><span class="keyword">lib</span>\<span class="title">site</span>-<span class="title">packages</span>\<span class="title">numpy</span>\<span class="title">lib</span>\<span class="title">__init__</span>.<span class="title">py</span> <span class="title">in</span> &lt;<span class="title">module</span>&gt;()</span></span><br><span class="line">      <span class="number">6</span> from numpy.version import version <span class="keyword">as</span> __version__</span><br><span class="line">      <span class="number">7</span> </span><br><span class="line">----&gt; <span class="number">8</span> from .type_check import *</span><br><span class="line">      <span class="number">9</span> from .index_tricks import *</span><br><span class="line">     <span class="number">10</span> from .function_base import *</span><br><span class="line"></span><br><span class="line"><span class="symbol">C:</span>\ProgramData\Anaconda3\<span class="class"><span class="keyword">lib</span>\<span class="title">site</span>-<span class="title">packages</span>\<span class="title">numpy</span>\<span class="title">lib</span>\<span class="title">type_check</span>.<span class="title">py</span> <span class="title">in</span> &lt;<span class="title">module</span>&gt;()</span></span><br><span class="line">      <span class="number">9</span>            <span class="string">'common_type'</span>]</span><br><span class="line">     <span class="number">10</span> </span><br><span class="line">---&gt; <span class="number">11</span> import numpy.core.numeric <span class="keyword">as</span> _nx</span><br><span class="line">     <span class="number">12</span> from numpy.core.numeric import asarray, asanyarray, array, isnan, zeros</span><br><span class="line">     <span class="number">13</span> from .ufunclike import isneginf, isposinf</span><br><span class="line"></span><br><span class="line"><span class="symbol">C:</span>\ProgramData\Anaconda3\<span class="class"><span class="keyword">lib</span>\<span class="title">site</span>-<span class="title">packages</span>\<span class="title">numpy</span>\<span class="title">core</span>\<span class="title">__init__</span>.<span class="title">py</span> <span class="title">in</span> &lt;<span class="title">module</span>&gt;()</span></span><br><span class="line">     <span class="number">24</span> Original error <span class="symbol">was:</span> %s</span><br><span class="line">     <span class="number">25</span> <span class="string">""</span><span class="string">" % (exc,)</span></span><br><span class="line"><span class="string">---&gt; 26     raise ImportError(msg)</span></span><br><span class="line"><span class="string">     27 finally:</span></span><br><span class="line"><span class="string">     28     for envkey in env_added:</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">ImportError: </span></span><br><span class="line"><span class="string">Importing the multiarray numpy extension module failed.  Most</span></span><br><span class="line"><span class="string">likely you are trying to import a failed build of numpy.</span></span><br><span class="line"><span class="string">If you're working with a numpy git repo, try `git clean -xdf` (removes all</span></span><br><span class="line"><span class="string">files not under version control).  Otherwise reinstall numpy.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">Original error was: DLL load failed: 找不到指定的模块。</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight xl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line">ImportError                               Traceback (most recent call last)</span><br><span class="line">&lt;ipython-input-<span class="number">1</span>-f1841272a015&gt; <span class="built_in">in</span> &lt;module&gt;()</span><br><span class="line">----&gt; <span class="number">1</span> <span class="keyword">import</span> kf_book.book_plots <span class="keyword">as</span> book_plots</span><br><span class="line">      <span class="number">2</span> from kf_book.book_plots <span class="keyword">import</span> plot_errorbars</span><br><span class="line">      <span class="number">3</span> plot_errorbars([(<span class="number">160</span>, <span class="number">8</span>, <span class="string">'A'</span>), (<span class="number">170</span>, <span class="number">8</span>, <span class="string">'B'</span>)], xlims=(<span class="number">150</span>, <span class="number">180</span>))</span><br><span class="line"></span><br><span class="line">C:\Kalman-<span class="built_in">and</span>-Bayesian-<span class="built_in">Filters</span>-<span class="built_in">in</span>-Python\kf_book\book_plots.py <span class="built_in">in</span> &lt;module&gt;()</span><br><span class="line">     <span class="number">24</span> <span class="keyword">import</span> ipywidgets</span><br><span class="line">     <span class="number">25</span> <span class="keyword">import</span> matplotlib <span class="keyword">as</span> mpl</span><br><span class="line">---&gt; <span class="number">26</span> <span class="keyword">import</span> matplotlib.pylab <span class="keyword">as</span> pylab</span><br><span class="line">     <span class="number">27</span> <span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">     <span class="number">28</span> from matplotlib.patches <span class="keyword">import</span> Circle</span><br><span class="line"></span><br><span class="line">C:\ProgramData\Anaconda3\lib\site-packages\matplotlib\pylab.py <span class="built_in">in</span> &lt;module&gt;()</span><br><span class="line">    <span class="number">250</span>     window_hanning, window_none)</span><br><span class="line">    <span class="number">251</span> </span><br><span class="line">--&gt; <span class="number">252</span> from matplotlib <span class="keyword">import</span> cbook, mlab, pyplot <span class="keyword">as</span> plt</span><br><span class="line">    <span class="number">253</span> from matplotlib.pyplot <span class="keyword">import</span> *</span><br><span class="line">    <span class="number">254</span> </span><br><span class="line"></span><br><span class="line">C:\ProgramData\Anaconda3\lib\site-packages\matplotlib\pyplot.py <span class="built_in">in</span> &lt;module&gt;()</span><br><span class="line">     <span class="number">29</span> from cycler <span class="keyword">import</span> cycler</span><br><span class="line">     <span class="number">30</span> <span class="keyword">import</span> matplotlib</span><br><span class="line">---&gt; <span class="number">31</span> <span class="keyword">import</span> matplotlib.colorbar</span><br><span class="line">     <span class="number">32</span> from matplotlib <span class="keyword">import</span> style</span><br><span class="line">     <span class="number">33</span> from matplotlib <span class="keyword">import</span> _pylab_helpers, interactive</span><br><span class="line"></span><br><span class="line">C:\ProgramData\Anaconda3\lib\site-packages\matplotlib\colorbar.py <span class="built_in">in</span> &lt;module&gt;()</span><br><span class="line">     <span class="number">34</span> <span class="keyword">import</span> matplotlib.collections <span class="keyword">as</span> collections</span><br><span class="line">     <span class="number">35</span> <span class="keyword">import</span> matplotlib.colors <span class="keyword">as</span> colors</span><br><span class="line">---&gt; <span class="number">36</span> <span class="keyword">import</span> matplotlib.contour <span class="keyword">as</span> contour</span><br><span class="line">     <span class="number">37</span> <span class="keyword">import</span> matplotlib.cm <span class="keyword">as</span> cm</span><br><span class="line">     <span class="number">38</span> <span class="keyword">import</span> matplotlib.gridspec <span class="keyword">as</span> gridspec</span><br><span class="line"></span><br><span class="line">C:\ProgramData\Anaconda3\lib\site-packages\matplotlib\contour.py <span class="built_in">in</span> &lt;module&gt;()</span><br><span class="line">     <span class="number">18</span> <span class="keyword">import</span> matplotlib.colors <span class="keyword">as</span> colors</span><br><span class="line">     <span class="number">19</span> <span class="keyword">import</span> matplotlib.collections <span class="keyword">as</span> mcoll</span><br><span class="line">---&gt; <span class="number">20</span> <span class="keyword">import</span> matplotlib.font_manager <span class="keyword">as</span> font_manager</span><br><span class="line">     <span class="number">21</span> <span class="keyword">import</span> matplotlib.<span class="keyword">text</span> <span class="keyword">as</span> <span class="keyword">text</span></span><br><span class="line">     <span class="number">22</span> <span class="keyword">import</span> matplotlib.cbook <span class="keyword">as</span> cbook</span><br><span class="line"></span><br><span class="line">C:\ProgramData\Anaconda3\lib\site-packages\matplotlib\font_manager.py <span class="built_in">in</span> &lt;module&gt;()</span><br><span class="line">     <span class="number">56</span> <span class="keyword">import</span> logging</span><br><span class="line">     <span class="number">57</span> </span><br><span class="line">---&gt; <span class="number">58</span> from matplotlib <span class="keyword">import</span> afm, cbook, ft2font, rcParams, get_cachedir</span><br><span class="line">     <span class="number">59</span> from matplotlib.compat <span class="keyword">import</span> subprocess</span><br><span class="line">     <span class="number">60</span> from matplotlib.fontconfig_pattern <span class="keyword">import</span> (</span><br><span class="line"></span><br><span class="line">ImportError: DLL load failed: 找不到指定的模块。</span><br></pre></td></tr></table></figure>
+<font color="red"><strong>wocccccccccccc!<br>怎么这么多莫名其妙的报错！顶不住了，重新安装Anaconda！！！</strong></font>
+
+<h2 id="卸载Anaconda"><a href="#卸载Anaconda" class="headerlink" title="卸载Anaconda"></a>卸载Anaconda</h2><p>在Anaconda安装目录（如C:\ProgramData\Anaconda3）下找到Uninstall-Anaconda2.exe 运行即可。</p>
+<h2 id="重新安装Anaconda"><a href="#重新安装Anaconda" class="headerlink" title="重新安装Anaconda"></a>重新安装Anaconda</h2><font color="red"><strong>从官网下载Anaconda，<a href="https://www.anaconda.com/distribution/#download-section" target="_blank" rel="noopener">https://www.anaconda.com/distribution/#download-section</a></strong></font>
+
+<p><strong>安装过程中不勾选添加路径到环境变量中，安装完成后自己手动添加环境变量</strong><br><img src="/images/Anaconda安装_环境变量.png" alt></p>
+<p><strong>添加环境变量</strong><br>主要有两个环境的配置:<br>1.anaconda安装路径（为了Python检查正常）:前面安装时路径一定要记清楚，我的默认路径是 <code>C:\ProgramData\Anaconda3</code><br>2.安装路径\scripts（为了conda检查正常）:只需在上述路径中找到scripts，然后复制路径即可，我的默认路径是 <code>C:\ProgramData\Anaconda3\Scripts</code></p>
+<p><strong>检查</strong><br>1.检查Python<br>cmd命令行输入Python，显示如下即说明安装正确：<br><img src="/images/Anaconda安装_激活Python.png" alt></p>
+<p>可能会出现如下警告，因为安装的是Anaconda中带的python版本，python处于conda环境中，使用python需要激活，否则无法引入已经安装好的库。<br><img src="/images/Anaconda安装_检查Python报错.png" alt></p>
+<p>解决方法如下：<br>首先，在cmd中输入 <code>conda info --envs</code>，查看Anaconda的位置，复制base后面的位置信息。<br>接下来，在cmd中输入 <code>conda activate + base</code> 后面的路径，进行激活。<br><img src="/images/Anaconda安装_conda_activate.png" alt><br>激活成功，命令行前面会加一个(base)，此时可以运行python,可以导入相关的库。</p>
+<p>执行完成后可在cmd中输入 <code>conda deactivate</code> 关闭激活。<br><strong>每次使用Python前都需要激活一下。</strong></p>
+<p>2.检查conda<br>cmd命令行输入conda，显示如下即说明安装正确：<br><img src="/images/Anaconda安装_检查conda.png" alt></p>
+<p><strong>注意，这两个都不要有warning的信息，否则要找出问题。</strong></p>
 
       
     </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/滤波/" rel="tag"># 滤波</a>
-          
-            <a href="/tags/Python/" rel="tag"># Python</a>
-          
-        </div>
-      
-
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2019/12/09/滤波学习笔记00-前言及环境搭建/" data-id="ckcyjmbt7003f4ctsja2oggv9" class="article-share-link">Share</a>
       
       
-      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/滤波/">滤波</a></li></ul>
 
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/12/03/C-C-分割字符串/" rel="next" title="C/C++_分割字符串">
-                <i class="fa fa-chevron-left"></i> C/C++_分割字符串
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/12/14/hexo-建立文章草稿/" rel="prev" title="hexo-建立文章草稿">
-                hexo-建立文章草稿 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
     </footer>
   </div>
   
+    
+<nav id="article-nav">
   
-  
-  </article>
-
-
-  </div>
-
-
-          </div>
-          
-
-  
-
-
-
-        </div>
+    <a href="/2019/12/14/hexo-建立文章草稿/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
         
-          
+          hexo-建立文章草稿
+        
+      </div>
+    </a>
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+  
+    <a href="/2019/12/03/C-C-分割字符串/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">C/C++_分割字符串</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C-C/">C/C++</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Kalman-and-Bayesian-Filters-in-Python学习/">Kalman-and-Bayesian-Filters-in-Python学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PLC/">PLC</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/QT总结/">QT总结</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo使用教程/">hexo使用教程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/工程/">工程</a></li></ul>
     </div>
   </div>
 
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
 
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image" src="/images/奔跑吧你会更强大.jpg" alt="又来偷偷看我啦">
-            
-              <p class="site-author-name" itemprop="name">又来偷偷看我啦</p>
-              <div class="site-description motion-element" itemprop="description"></div>
-          </div>
-
-          
-            <nav class="site-state motion-element">
-              
-                <div class="site-state-item site-state-posts">
-                
-                  <a href="/archives/">
-                
-                    <span class="site-state-item-count">23</span>
-                    <span class="site-state-item-name">日志</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-categories">
-                  
-                    
-                      <a href="/categories/">
-                    
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">6</span>
-                    <span class="site-state-item-name">分类</span>
-                  </a>
-                </div>
-              
-
-              
-                
-                
-                <div class="site-state-item site-state-tags">
-                  
-                    
-                      <a href="/tags/">
-                    
-                  
-                    
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                      
-                    
-                    <span class="site-state-item-count">11</span>
-                    <span class="site-state-item-name">标签</span>
-                  </a>
-                </div>
-              
-            </nav>
-          
-
-          
-
-          
-
-          
-
-          
-
-          
-          
-
-          
-            
-          
-          
-
-        </div>
-      </div>
-
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#阅读教程的两种方式"><span class="nav-number">2.</span> <span class="nav-text">阅读教程的两种方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境搭建"><span class="nav-number">3.</span> <span class="nav-text">环境搭建</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载和运行教材"><span class="nav-number">4.</span> <span class="nav-text">下载和运行教材</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#遇到的问题"><span class="nav-number">5.</span> <span class="nav-text">遇到的问题</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
-      
-
-      
-
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MATLAB/">MATLAB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PLC/">PLC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/QT/">QT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/landscape主题/">landscape主题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/next主题/">next主题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/宫灯夜明/">宫灯夜明</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工程/">工程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/滤波/">滤波</a></li></ul>
     </div>
-  </aside>
+  </div>
+
+
   
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">六月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a></li></ul>
+    </div>
+  </div>
 
 
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
         
-      </div>
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">又来偷偷看我啦</span>
-
-  
-
-  
-</div>
-
-
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
-
-
-
-  <span class="post-meta-divider">|</span>
-
-
-
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.1</div>
-
-
-
-
+          <li>
+            <a href="/2020/07/16/C-中的const和constexpr/">C++中的const和constexpr</a>
+          </li>
         
-<div class="busuanzi-count">
-  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-
-  
-    <span class="post-meta-item-icon">
-      <i class="fa fa-user"></i>
-    </span>
-    <span class="site-uv" title="总访客量">
-      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
-    </span>
-  
-
-  
-    <span class="post-meta-divider">|</span>
-  
-
-  
-    <span class="post-meta-item-icon">
-      <i class="fa fa-eye"></i>
-    </span>
-    <span class="site-pv" title="总访问量">
-      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
-    </span>
-  
-</div>
-
-
-
-
-
-
-
-
-
+          <li>
+            <a href="/2019/12/14/hexo-建立文章草稿/">hexo-建立文章草稿</a>
+          </li>
         
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
+          <li>
+            <a href="/2019/12/09/滤波学习笔记00-前言及环境搭建/">滤波学习笔记00-前言及环境搭建</a>
+          </li>
         
-      </div>
-    
-
-    
-
-    
-
-    
+          <li>
+            <a href="/2019/12/03/C-C-分割字符串/">C/C++_分割字符串</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/03/QT-分割字符串/">QT_分割字符串</a>
+          </li>
+        
+      </ul>
+    </div>
   </div>
 
   
-
-<script>
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
-</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</aside>
+        
+      </div>
+      <footer id="footer">
   
-  <script src="/lib/jquery/index.js?v=2.1.3"></script>
-
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 又来偷偷看我啦<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
   
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
+    <a href="/" class="mobile-nav-link">Home</a>
   
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-
+    <a href="/archives/" class="mobile-nav-link">Archives</a>
   
-
-
-  <script src="/js/utils.js?v=7.1.1"></script>
-
-  <script src="/js/motion.js?v=7.1.1"></script>
-
-
-
+    <a href="/categories/" class="mobile-nav-link">categories</a>
   
-  
+</nav>
+    
 
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
-  <script src="/js/schemes/muse.js?v=7.1.1"></script>
 
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-  
-  <script src="/js/scrollspy.js?v=7.1.1"></script>
-<script src="/js/post-details.js?v=7.1.1"></script>
+<script src="/js/script.js"></script>
 
 
 
-  
-
-
-  <script src="/js/next-boot.js?v=7.1.1"></script>
-
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-
-  
-  <script>
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
-
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
-
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
-
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('1');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
-        }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
-
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
-
-
-
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  <!-- 代码块复制功能 -->
-<script type="text/javascript" src="/lib/zclip/clipboard.js-master"></script>	
-<script type="text/javascript" src="/js/src/custom.js"></script>
+  </div>
 </body>
 </html>

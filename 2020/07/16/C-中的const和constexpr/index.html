@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>C++中的const和constexpr | Hello World</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="这其实是一个遗留的命名问题，简单说const其实是readonly，constexpr才是const。 constC++中的const的目的是通过编译器来保证对象的常量性，强制编译器将所有可能违背const对象的常量性的操作都视为error。1.用const修饰变量的语义是要求编译器去阻止所有对该变量的赋值行为。因此，必须在const变量初始化时就提供给它初值：123const int i;i =">
+<meta name="keywords" content="C++">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++中的const和constexpr">
+<meta property="og:url" content="http://yoursite.com/2020/07/16/C-中的const和constexpr/index.html">
+<meta property="og:site_name" content="Hello World">
+<meta property="og:description" content="这其实是一个遗留的命名问题，简单说const其实是readonly，constexpr才是const。 constC++中的const的目的是通过编译器来保证对象的常量性，强制编译器将所有可能违背const对象的常量性的操作都视为error。1.用const修饰变量的语义是要求编译器去阻止所有对该变量的赋值行为。因此，必须在const变量初始化时就提供给它初值：123const int i;i =">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-07-23T08:23:57.071Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C++中的const和constexpr">
+<meta name="twitter:description" content="这其实是一个遗留的命名问题，简单说const其实是readonly，constexpr才是const。 constC++中的const的目的是通过编译器来保证对象的常量性，强制编译器将所有可能违背const对象的常量性的操作都视为error。1.用const修饰变量的语义是要求编译器去阻止所有对该变量的赋值行为。因此，必须在const变量初始化时就提供给它初值：123const int i;i =">
+  
+    <link rel="alternate" href="/atom.xml" title="Hello World" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hello World</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">一切开始的时候，是最美好的时光。</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives/">Archives</a>
+        
+          <a class="main-nav-link" href="/categories/">categories</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-C-中的const和constexpr" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/07/16/C-中的const和constexpr/" class="article-date">
+  <time datetime="2020-07-16T03:25:46.000Z" itemprop="datePublished">2020-07-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/C-C/">C/C++</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      C++中的const和constexpr
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这其实是一个遗留的命名问题，简单说const其实是readonly，constexpr才是const。</p>
+<h2 id="const"><a href="#const" class="headerlink" title="const"></a>const</h2><p>C++中的const的目的是通过编译器来保证对象的常量性，强制编译器将所有可能违背const对象的常量性的操作都视为error。<br>1.用const修饰变量的语义是要求编译器去阻止所有对该变量的赋值行为。因此，必须在const变量初始化时就提供给它初值：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> i;</span><br><span class="line">i = <span class="number">5</span>; <span class="comment">// !error</span></span><br><span class="line"><span class="keyword">const</span> <span class="keyword">int</span> j = <span class="number">10</span>; <span class="comment">// ok</span></span><br></pre></td></tr></table></figure></p>
+<p>这个初值可以是编译时即确定的值，也可以是运行期才确定的值。如果给整数类型的const变量一个编译时初值，那么可以用这个变量作为声明数组时的长度：<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="built_in">int</span> <span class="type">COMPILE_CONST</span> = <span class="number">10</span>;</span><br><span class="line"><span class="keyword">const</span> <span class="built_in">int</span> <span class="type">RunTimeConst</span> = cin.get();</span><br><span class="line"><span class="built_in">int</span> a1[<span class="type">COMPLIE_CONST</span>]; // ok <span class="keyword">in</span> C++ <span class="keyword">and</span> error <span class="keyword">in</span> C</span><br><span class="line"><span class="built_in">int</span> a2[<span class="type">RunTimeConst</span>]; // !error <span class="keyword">in</span> C++</span><br></pre></td></tr></table></figure></p>
+<p>文件域的const变量默认是文件内可见的，如果需要在b.cpp中使用a.cpp中的const变量M，需要在M的初始化处增加extern：<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//a.cpp</span></span><br><span class="line"><span class="keyword">extern</span> <span class="keyword">const</span> <span class="keyword">int</span> M = <span class="number">20</span>;</span><br><span class="line"> </span><br><span class="line"><span class="comment">//b.cpp</span></span><br><span class="line"><span class="keyword">extern</span> <span class="keyword">const</span> <span class="keyword">int</span> M;</span><br></pre></td></tr></table></figure></p>
+<p>一般认为将变量的定义放在.h文件中会导致所有include该.h文件的.cpp文件都有此变量的定义，在链接时会造成冲突。但将const变量的定义放在.h文件中是可以的，编译器会将这个变量放入每个.cpp文件的匿名namespace中，因而属于是不同变量，不会造成链接冲突。（注意：但如果头文件中的const量的初始值依赖于某个函数，而每次调用此函数的返回值不固定的话，会导致不同的编译单元中看到的该const量的值不相等。猜测：此时将该const量作为某个类的static成员可能会解决此问题。）</p>
+<p>2.const修饰引用时，其意义与修饰变量相同。但const在修饰指针时，规则就有些复杂了。<br>简单的说，可以将指针变量的类型按变量名左边最近的<code>*</code>分成两部分，右边的部分表示指针变量自己的性质，而左边的部分则表示它指向元素的性质：<br><figure class="highlight smali"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">const<span class="built_in"> int </span>*p1; // p1 is a non-const pointer<span class="built_in"> and </span>points to a<span class="built_in"> const </span>int</span><br><span class="line">int *<span class="built_in"> const </span>p2; // p2 is a<span class="built_in"> const </span>pointer<span class="built_in"> and </span>points to a non-const int</span><br><span class="line">const<span class="built_in"> int </span>*<span class="built_in"> const </span>p3; // p3 is a<span class="built_in"> const </span>pointer<span class="built_in"> and </span>points to a<span class="built_in"> const </span>it</span><br><span class="line">const<span class="built_in"> int </span>*pa1[10]; // pa1 is an<span class="built_in"> array </span>and contains 10 non-const pointer point to a<span class="built_in"> const </span>int</span><br><span class="line">int *<span class="built_in"> const </span>pa2[10]; // pa2 is an<span class="built_in"> array </span>and contains 10<span class="built_in"> const </span>pointer point to a non-const int</span><br><span class="line">const<span class="built_in"> int </span>(* p4)[10]; // p4 is a non-const pointer<span class="built_in"> and </span>points to an<span class="built_in"> array </span>contains 10<span class="built_in"> const </span>int</span><br><span class="line">const<span class="built_in"> int </span>(*pf)(); // pf is a non-const pointer<span class="built_in"> and </span>points to a function which has no arguments<span class="built_in"> and </span>returns a<span class="built_in"> const </span>int</span><br></pre></td></tr></table></figure></p>
+<h2 id="constexpr"><a href="#constexpr" class="headerlink" title="constexpr"></a>constexpr</h2><p>constexpr是C++11中新增的关键字，其语义是“常量表达式”，也就是在编译期可求值的表达式。最基础的常量表达式就是字面值或全局变量/函数的地址或sizeof等关键字返回的结果，而其它常量表达式都是由基础表达式通过各种确定的运算得到的。constexpr值可用于enum、switch、数组长度等场合。<br>constexpr所修饰的变量一定是编译期可求值的，所修饰的函数在其所有参数都是constexpr时，一定会返回constexpr。<br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">constexpr</span> <span class="keyword">int</span> <span class="title">Inc</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> i + <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line"> </span><br><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> a = Inc(<span class="number">1</span>); <span class="comment">// ok</span></span><br><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> b = Inc(<span class="built_in">cin</span>.get()); <span class="comment">// !error</span></span><br><span class="line"><span class="keyword">constexpr</span> <span class="keyword">int</span> c = a * <span class="number">2</span> + <span class="number">1</span>; <span class="comment">// ok</span></span><br></pre></td></tr></table></figure></p>
+<p>constexpr的好处：<br>1.是一种很强的约束，更好地保证程序的正确语义不被破坏。<br>2.编译器可以在编译期对constexpr的代码进行非常大的优化，比如将用到的constexpr表达式都直接替换成最终结果等。<br>3.相比宏来说，没有额外的开销，但更安全可靠。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/07/16/C-中的const和constexpr/" data-id="ckcyjmbri000k4ctssfvmfura" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/">C++</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/12/14/hexo-建立文章草稿/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">hexo-建立文章草稿</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/C-C/">C/C++</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Kalman-and-Bayesian-Filters-in-Python学习/">Kalman-and-Bayesian-Filters-in-Python学习</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/PLC/">PLC</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/QT总结/">QT总结</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/hexo使用教程/">hexo使用教程</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/工程/">工程</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/C/">C++</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MATLAB/">MATLAB</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/PLC/">PLC</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/QT/">QT</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/landscape主题/">landscape主题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/next主题/">next主题</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/宫灯夜明/">宫灯夜明</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工程/">工程</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/滤波/">滤波</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">七月 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">六月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">五月 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/07/16/C-中的const和constexpr/">C++中的const和constexpr</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/14/hexo-建立文章草稿/">hexo-建立文章草稿</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/09/滤波学习笔记00-前言及环境搭建/">滤波学习笔记00-前言及环境搭建</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/03/C-C-分割字符串/">C/C++_分割字符串</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/03/QT-分割字符串/">QT_分割字符串</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 又来偷偷看我啦<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives/" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories/" class="mobile-nav-link">categories</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
